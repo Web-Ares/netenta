@@ -32,7 +32,7 @@
 .site {
     font-family:'Roboto', sans-serif;
     min-height: 100%;
-    min-width: 1000px;
+    min-width: 320px;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -42,8 +42,7 @@
     display: block;
     clear: both;
     width: 100%;
-
-    height: 708px;
+    height: 753px;
 }
 .site__content {
     position: relative;
@@ -63,16 +62,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 708px;
+    height: 753px;
     background-color: #080808;
 }
 .site__footer-layout {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     height: inherit;
-    padding-top: 15px;
+    padding-top: 43px;
+    text-align: center;
 }
 .site__footer-super,
 .site__footer-popular,
@@ -84,21 +84,109 @@
     color: #999999;
 }
 .site__footer-layout li{
-    margin-bottom: 15px;
+    margin-bottom: 4.5px;
 }
 .site__footer-layout li a:hover{
     color:#fff;
 }
 .site__footer-logo{
-    display: none;
-    position: absolute;
-    bottom: 32px;
-    left: 0;
+    position: relative;
+    display: block;
+    margin: 0 auto 26px;
+    width: 141px;
+    height: 142px;
 }
 .site__footer-logo img{
     width: 100%;
     height: 100%;
-}/* --------------- /site --------------- */
+}
+.site__footer-copyright{
+    display: block;
+    color: #999999;
+    font-size: 18px;
+}
+.site__footer-top{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #0c0c0c;
+}
+/* --------------- /site --------------- */
+
+/* --------------- social --------------- */
+.social{
+    position: relative;
+    padding-top: 6px;
+    margin-bottom: 22px;
+}
+.social-f{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url("../img/social-f.png") no-repeat center;
+    background-size: contain;
+    margin-right: 25px;
+}
+.social-t{
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: url("../img/social-t.png") no-repeat center;
+    background-size: contain;
+    margin-right: 16px;
+}
+.social-g{
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background: url("../img/social-g.png") no-repeat center;
+    background-size: contain;
+    margin-right: 16px;
+}
+.social-in{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url("../img/social-in.png") no-repeat center;
+    background-size: contain;
+}
+.social-f:hover{
+    background: url("../img/social-f_h.png") no-repeat center;
+    background-size: contain;
+}
+.social-t:hover{
+    background: url("../img/social-t_h.png") no-repeat center;
+    background-size: contain;
+}
+.social-g:hover{
+    background: url("../img/social-g_h.png") no-repeat center;
+    background-size: contain;
+}
+.social-in:hover{
+    background: url("../img/social-in_h.png") no-repeat center;
+    background-size: contain;
+}
+/* --------------- /social --------------- */
+
+/* --------------- btn-up --------------- */
+.btn-up {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    right: 50px;
+    background: url("../img/top_mobile.png") no-repeat;
+    width: 86px;
+    height: 103px;
+    border-radius: 26px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 5;
+}
+/* --------------- /btn-up --------------- */
 
 /* --------------- logo --------------- */
 .logo {
@@ -111,33 +199,56 @@
 @media (min-width: 768px){
 
     /* --------------- /site__footer --------------- */
-    .site__footer,
+    .site__footer{
+        height: 556px;
+    }
     .site__footer-layout {
-        height: 289px;
+        height: 506px;
     }
     .site:after {
-        height: 289px;
+        height: 556px;
+    }
+    .site__footer-top {
+        height: 50px;
     }
     .site__footer-layout {
-        padding-top: 53px;
+        padding-top: 43px;
     }
     .site__footer-layout li a{
-        font-size: 30px;
+        font-size: 18px;
     }
     .site__footer-logo{
-        display: block;
-        bottom: 28px;
-        left: 16px;
+        position: absolute;
+        top: 45px;
+        left: 14px;
     }
     .site__footer-menu {
         display: inline-block;
-        margin-left: 316px;
         vertical-align: top;
     }
-    .site__footer-layout li {
-        margin-bottom: 18px;
+    .site__footer-super{
+        margin-bottom: 27px;
+    }
+    .site__footer-copyright {
+        font-size: 16.5px;
     }
     /* --------------- /site__footer --------------- */
+
+    /* --------------- social --------------- */
+    .social {
+        position: absolute;
+        right: 1px;
+        top: 23px;
+    }
+    /* --------------- /social --------------- */
+
+    /* --------------- btn-up --------------- */
+    .btn-up {
+        background: url("../img/top.png") no-repeat;
+        width: 178px;
+        height: 265px;
+    }
+    /* --------------- btn-up --------------- */
 }
 @media (min-width: 1024px){
 
@@ -146,40 +257,53 @@
     .site__footer-layout {
         height: 221px;
     }
+    .site__footer-top {
+        display: none;
+    }
     .site:after {
         height: 221px;
     }
     .site__footer-layout {
         padding-top: 34px;
+        text-align: left;
+        padding-left: 146px;
     }
     .site__footer-popular{
         display: inline-block;
         vertical-align: top;
-        margin-left: 70px;
+        margin-left: 35px;
     }
     .site__footer-super{
         display: inline-block;
         vertical-align: top;
-        margin-left: 70px;
+        margin-left: 37px;
     }
     .site__footer-layout li a{
         font-size: 14px;
     }
     .site__footer-layout li{
-        margin-bottom: 8px;
+        margin-bottom: 14px;
     }
     .site__footer-layout h2{
         margin-bottom: 15px;
         font-size: 16px;
     }
     .site__footer-logo{
-        width: 136px;
-        height: 123px;
-        bottom: 63px;
-        left: 48px;
+        top: 29px;
+        width: 137px;
+        left: 0;
     }
     .site__footer-menu {
-        margin-left: 256px;
+        margin-left: 42px;
+        text-align: left;
+    }
+    .site__footer-copyright {
+        position: absolute;
+        right: 0;
+        bottom: 53px;
+        font-size: 12px;
+    }
+    .site__footer-super, .site__footer-popular, .site__footer-menu {
         text-align: left;
     }
     /* --------------- /site__footer --------------- */
