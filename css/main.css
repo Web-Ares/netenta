@@ -28,17 +28,9 @@
 }
 /* --------------- /placeholder --------------- */
 
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
-
 /* --------------- site --------------- */
 .site {
+    font-family:'Roboto', sans-serif;
     min-height: 100%;
     min-width: 1000px;
     overflow: hidden;
@@ -82,27 +74,20 @@
     height: inherit;
     padding-top: 15px;
 }
+.site__footer-super,
+.site__footer-popular,
 .site__footer-menu{
     text-align: center;
 }
-.site__footer-menu>h2{
-    display: none;
-}
 .site__footer-layout li a{
     font-size: 18px;
-    color: #6a828a;
+    color: #999999;
 }
 .site__footer-layout li{
     margin-bottom: 15px;
 }
 .site__footer-layout li a:hover{
-    color:#0098ff;
-}
-.site__footer-popular{
-    display: none;
-}
-.site__footer-super{
-    display: none;
+    color:#fff;
 }
 .site__footer-logo{
     display: none;
@@ -170,15 +155,12 @@
     .site__footer-popular{
         display: inline-block;
         vertical-align: top;
-        margin-left: 103px;
+        margin-left: 70px;
     }
     .site__footer-super{
         display: inline-block;
         vertical-align: top;
-        margin-left: 107px;
-    }
-    .site__footer-super>h2{
-        color:#dc2d26;
+        margin-left: 70px;
     }
     .site__footer-layout li a{
         font-size: 14px;
@@ -190,14 +172,10 @@
         margin-bottom: 15px;
         font-size: 16px;
     }
-    .site__footer-menu>h2{
-        display: block;
-        font-size: 16px;
-    }
     .site__footer-logo{
         width: 136px;
         height: 123px;
-        bottom: 36px;
+        bottom: 63px;
         left: 48px;
     }
     .site__footer-menu {
