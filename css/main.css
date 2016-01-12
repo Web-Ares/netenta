@@ -94,7 +94,8 @@ input[type="search"]::-webkit-search-cancel-button {
     right: 0;
     bottom: 0;
     height: 753px;
-    background-color: #080808;
+    background: #0c0c0c;
+    padding-top: 41px;
 }
 .site__footer-layout {
     position: relative;
@@ -104,6 +105,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: inherit;
     padding-top: 43px;
     text-align: center;
+    background: #080808;
 }
 .site__footer-super,
 .site__footer-popular,
@@ -137,15 +139,13 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #999999;
     font-size: 18px;
 }
-.site__footer-top{
-    position: relative;
-    width: 100%;
-    height: 45px;
-    background: #0c0c0c;
-}
 /* --------------- /site --------------- */
 
 /* --------------- site__aside --------------- */
+.site__aside .search{
+    display: none;
+}
+
 .site__aside{
     position: relative;
     width: 100%;
@@ -155,13 +155,15 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family:'Raleway', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 10px 0 10px 6px;
     font-size: 24px;
     color: #e5e5e5;
+    letter-spacing: 2.3px;
 }
 .site__aside ul{
     background: #1f1f1f;
-    padding-top: 10px;
+    padding-top: 21px;
+    margin-bottom: 29px;
 }
 .site__aside ul li a{
     font-size: 18px;
@@ -180,11 +182,23 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-bottom: 16px;
     margin-bottom: 15.5px;
 }
+.site__aside ul{
+    padding: 22px 10px 5px;
+    margin-bottom: 7px;
+}
+.new-netent__desktop{
+    display: none;
+}
 .site__aside__bonus ul li,
 .site__aside__funding ul li,
 .site__aside__netent ul li,
 .site__aside__new-netent ul li{
     border-bottom: 1px solid #292929;
+}
+.site__aside__popular ul li{
+}
+.site__aside__popular ul{
+    padding-bottom: 10px;
 }
 .site__aside__bonus ul li:last-child,
 .site__aside__funding ul li:last-child,
@@ -198,6 +212,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .site__aside__bonus{
     display: none;
+}
+.site__aside__popular ul li{
+    margin-bottom: 12px;
+    padding-bottom: 0;
 }
 /* --------------- /site__aside --------------- */
 
@@ -264,12 +282,12 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn-up {
     display: none;
     position: fixed;
-    bottom: 16px;
-    right: 50px;
+    bottom: 64px;
+    right: 27px;
     background: url("../img/top_mobile.png") no-repeat;
-    width: 86px;
-    height: 103px;
-    border-radius: 26px;
+    background-size: contain;
+    width: 42px;
+    height: 51px;
     overflow: hidden;
     cursor: pointer;
     z-index: 5;
@@ -660,15 +678,13 @@ a.btn-play{
     /* --------------- /site__footer --------------- */
     .site__footer{
         height: 556px;
+        padding-top: 44px;
     }
     .site__footer-layout {
         height: 506px;
     }
     .site:after {
         height: 556px;
-    }
-    .site__footer-top {
-        height: 44px;
     }
     .site__footer-layout {
         padding-top: 43px;
@@ -686,10 +702,7 @@ a.btn-play{
         vertical-align: top;
     }
     .site__footer-super{
-        margin-bottom: 27px;
-    }
-    .site__footer-copyright {
-        font-size: 16.5px;
+        margin-bottom: 25px;
     }
     /* --------------- /site__footer --------------- */
 
@@ -706,13 +719,8 @@ a.btn-play{
         padding: 20px 10px 5px;
         margin-bottom: 7px;
     }
-    .site__aside__popular li{
-        margin-bottom: 12px;
-        padding-bottom: 0;
-    }
-    .site__aside__popular li:last-child{
-        margin-top: 18px;
-        margin-bottom: 15px;
+    .site__aside__popular ul li {
+        margin-bottom: 13px;
     }
     /* --------------- /site__aside --------------- */
 
@@ -777,8 +785,9 @@ a.btn-play{
     /* --------------- btn-up --------------- */
     .btn-up {
         background: url("../img/top.png") no-repeat;
-        width: 178px;
-        height: 265px;
+        background-size: contain;
+        width: 90px;
+        height: 155px;
     }
     /* --------------- btn-up --------------- */
 
@@ -895,11 +904,29 @@ a.btn-play{
         padding: 0;
     }
     /* --------------- site__aside --------------- */
+    .site__aside .search{
+        width: 100%;
+        display:block;
+        margin-bottom: 13px;
+    }
+    .site__aside .search__frame {
+        padding-top: 0;
+    }
+    .site__aside .search__frame button {
+        top: 2px;
+    }
     .site__aside{
         width: 235px;
         display: inline-block;
         vertical-align: top;
         margin-left: 16px;
+        margin-bottom: 84px;
+    }
+    .site__aside li {
+        margin-bottom: 17px;
+    }
+    .site__aside h2 {
+        padding: 7px 0 7px 17px;
     }
     .popular-mobile{
         display: block;
@@ -907,29 +934,60 @@ a.btn-play{
     .site__aside__bonus{
         display: block;
     }
-    .site__aside__bonus ul li,
-    .site__aside__funding ul li,
-    .site__aside__netent ul li,
-    .site__aside__new-netent ul li {
-        padding-left: 46px;
+    .site__aside ul li a {
+        font-size: 14px;
+    }
+    .new-netent__mobile{
+        display: none;
+    }
+    .new-netent__desktop{
+        display: block;
+    }
+    .site__aside .new-netent__desktop li {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        transition: opacity .3s ease;
+    }
+    .site__aside .new-netent__desktop li:hover{
+         opacity: 0.7;
+     }
+    .new-netent__desktop li a{
+        display: block;
+        width: 100%;
+        height: 131px;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 104px;
+        padding-left: 15px;
+        font-size: 14px;
+        text-transform: none;
     }
     .site__aside__netent li{
         position: relative;
+    }
+    .site__aside ul {
+        padding: 20px 22px 10px 63px;
+        margin-bottom: 19px;
+        background: #1f1f1f url("../img/aside-bg.png") no-repeat top;
+    }
+    .site__aside ul.new-netent__desktop{
+        padding: 25px 22px 25px 20px;
+        margin-bottom: 19px;
     }
     a.netent__item1:before {
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
-        top: -8px;
+        left: -43px;
+        top: -6px;
         background: url("../img/aside_01.png") no-repeat;
         position: absolute;
         z-index: 1;
     }
     a.netent__item1:hover:after {
         content: '';
-        left: -4px;
-        top: -10px;
+        left: -47px;
+        top: -8px;
         width: 36px;
         height: 31px;
         background: url("../img/aside_01-h.png") no-repeat;
@@ -940,7 +998,7 @@ a.btn-play{
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
+        left: -40px;
         top: -2px;
         background: url("../img/aside_02.png") no-repeat;
         position: absolute;
@@ -948,7 +1006,7 @@ a.btn-play{
     }
     a.netent__item2:hover:after {
         content: '';
-        left: -4px;
+        left: -44px;
         top: -4px;
         width: 36px;
         height: 31px;
@@ -960,7 +1018,7 @@ a.btn-play{
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
+        left: -40px;
         top: -2px;
         background: url("../img/aside_03.png") no-repeat;
         position: absolute;
@@ -968,7 +1026,7 @@ a.btn-play{
     }
     a.netent__item3:hover:after {
         content: '';
-        left: -4px;
+        left: -44px;
         top: -4px;
         width: 36px;
         height: 31px;
@@ -980,7 +1038,7 @@ a.btn-play{
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
+        left: -40px;
         top: -8px;
         background: url("../img/aside_04.png") no-repeat;
         position: absolute;
@@ -988,7 +1046,7 @@ a.btn-play{
     }
     a.netent__item4:hover:after {
         content: '';
-        left: -4px;
+        left: -44px;
         top: -10px;
         width: 36px;
         height: 31px;
@@ -1000,7 +1058,7 @@ a.btn-play{
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
+        left: -40px;
         top: -8px;
         background: url("../img/aside_05.png") no-repeat;
         position: absolute;
@@ -1008,7 +1066,7 @@ a.btn-play{
     }
     a.netent__item5:hover:after {
         content: '';
-        left: -4px;
+        left: -44px;
         top: -10px;
         width: 36px;
         height: 31px;
@@ -1020,7 +1078,7 @@ a.btn-play{
         content: '';
         width: 33px;
         height: 31px;
-        left: 0;
+        left: -40px;
         top: -8px;
         background: url("../img/aside_06.png") no-repeat;
         position: absolute;
@@ -1028,7 +1086,7 @@ a.btn-play{
     }
     a.netent__item6:hover:after {
         content: '';
-        left: -4px;
+        left: -44px;
         top: -10px;
         width: 36px;
         height: 31px;
@@ -1040,7 +1098,7 @@ a.btn-play{
         content: '';
         width: 32px;
         height: 26px;
-        left: 0;
+        left: -40px;
         top: -8px;
         background: url("../img/aside_07.png") no-repeat;
         position: absolute;
@@ -1048,7 +1106,7 @@ a.btn-play{
     }
     a.netent__item7:hover:after {
         content: '';
-        left: -2px;
+        left: -42px;
         top: -8px;
         width: 36px;
         height: 30px;
@@ -1066,6 +1124,8 @@ a.btn-play{
     a.funding__item5:before,
     a.funding__item6:before{
         content: '';
+        left: -43px;
+        top: -5px;
         background: url("../img/aside-icon.png") no-repeat;
         position: absolute;
         z-index: 1;
@@ -1076,8 +1136,8 @@ a.btn-play{
     a.funding__item4:after,
     a.funding__item5:after,
     a.funding__item6:after{
-        left: -4px;
-        top: -10px;
+        left: -47px;
+        top: -7px;
         content: '';
         background: url("../img/aside-icon-h.png") no-repeat;
         position: absolute;
@@ -1086,8 +1146,6 @@ a.btn-play{
     a.funding__item1:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 4px;
     }
     a.funding__item1:hover:after {
@@ -1098,8 +1156,6 @@ a.btn-play{
     a.funding__item2:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 -46px;
     }
     a.funding__item2:hover:after {
@@ -1110,8 +1166,6 @@ a.btn-play{
     a.funding__item3:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 -96px;
     }
     a.funding__item3:hover:after {
@@ -1122,8 +1176,6 @@ a.btn-play{
     a.funding__item4:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 -147px;
     }
     a.funding__item4:hover:after {
@@ -1134,8 +1186,6 @@ a.btn-play{
     a.funding__item5:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 -196px;
     }
     a.funding__item5:hover:after {
@@ -1146,8 +1196,6 @@ a.btn-play{
     a.funding__item6:before {
         width: 32px;
         height: 26px;
-        left: 0;
-        top: -8px;
         background-position: 0 -246px;
     }
     a.funding__item6:hover:after {
@@ -1167,6 +1215,8 @@ a.btn-play{
     a.bonus__item7:before,
     a.bonus__item8:before{
         content: '';
+        left: -43px;
+        top: -8px;
         background: url("../img/aside-bonus.png") no-repeat;
         position: absolute;
         z-index: 1;
@@ -1179,7 +1229,7 @@ a.btn-play{
     a.bonus__item6:after,
     a.bonus__item7:after,
     a.bonus__item8:after{
-        left: -4px;
+        left: -47px;
         top: -10px;
         content: '';
         background: url("../img/aside-bonus-h.png") no-repeat;
@@ -1189,8 +1239,6 @@ a.btn-play{
     a.bonus__item1:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 4px;
     }
     a.bonus__item1:hover:after {
@@ -1201,8 +1249,6 @@ a.btn-play{
     a.bonus__item2:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -48px;
     }
     a.bonus__item2:hover:after {
@@ -1213,8 +1259,6 @@ a.btn-play{
     a.bonus__item3:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -102px;
     }
     a.bonus__item3:hover:after {
@@ -1225,8 +1269,6 @@ a.btn-play{
     a.bonus__item4:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -151px;
     }
     a.bonus__item4:hover:after {
@@ -1237,8 +1279,6 @@ a.btn-play{
     a.bonus__item5:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -199px;
     }
     a.bonus__item5:hover:after {
@@ -1249,8 +1289,6 @@ a.btn-play{
     a.bonus__item6:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -250px;
     }
     a.bonus__item6:hover:after {
@@ -1261,8 +1299,6 @@ a.btn-play{
     a.bonus__item7:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -300px;
     }
     a.bonus__item7:hover:after {
@@ -1273,14 +1309,24 @@ a.btn-play{
     a.bonus__item8:before {
         width: 32px;
         height: 37px;
-        left: 0;
-        top: -8px;
         background-position: 0 -352px;
     }
     a.bonus__item8:hover:after {
         width: 36px;
         height: 37px;
         background-position: 0 -352px;
+    }
+    .site__aside__popular ul{
+        padding: 22px 22px 17px 20px;
+    }
+    .site__aside__popular ul li{
+        margin-bottom: 4px;
+    }
+    .site__aside__bonus ul li:last-child,
+    .site__aside__funding ul li:last-child,
+    .site__aside__netent ul li:last-child{
+        border-bottom: 1px solid #292929;
+        padding-bottom: 16px;
     }
     /* --------------- /site__aside --------------- */
 
@@ -1300,8 +1346,9 @@ a.btn-play{
     .site__footer-layout {
         height: 221px;
     }
-    .site__footer-top {
-        display: none;
+    .site__footer{
+        padding-top: 0;
+        background: #080808;
     }
     .site:after {
         height: 221px;
