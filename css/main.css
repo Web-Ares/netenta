@@ -244,6 +244,69 @@
     cursor: pointer;
     z-index: 5;
 }
+.btn-play{
+
+}
+.btn-all{
+
+}
+.btn-play{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    position: relative;
+    height: 31px;
+    line-height: 30px;
+    width: 139px;
+    letter-spacing: 2px;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, #61f2de 0%,#7ad341 50%);
+    background: -o-linear-gradient(left, #61f2de 0%,#7ad341 50%);
+    background: linear-gradient(left, #61f2de 0%,#7ad341 50%);
+    border-radius: 51px;
+    text-align: center;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+.btn-play>span{
+    position: relative;
+    z-index: 2;
+}
+.btn-play:before{
+    position: absolute;
+    content:"";
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background:#0b1218;
+    border-radius: 51px;
+    z-index: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+}
+.btn-play:hover{
+    color: #000;
+}
+.btn-play:hover:before{
+    -webkit-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+.btn-all{
+    text-transform: none;
+    font-weight: 300;
+    font-size: 17px;
+    float: right;
+    right: -2px;
+    background:#999999;
+    line-height: 31px;
+}
 /* --------------- /btn-up --------------- */
 
 
@@ -538,6 +601,98 @@
     text-align: center;
 }
 /* --------------- /text --------------- */
+
+/* --------------- games --------------- */
+.games{
+    height: 800px;
+    width: 100%;
+    padding: 24px 10px 0;
+    background: #1f1f1f;
+}
+.games .game{
+    position: relative;
+    padding-top: 23px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #292929;
+}
+.games .game:first-child{
+    border-top: 2px solid #292929;
+}
+ .game .game__flag{
+     width: 30px;
+     height: 30px;
+     border-radius: 30px;
+     background: url("../img/flag1.png");
+     background-size: cover;
+     display: inline-block;
+}
+.game .game__casino{
+    position: relative;
+    color: #7ad343;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+.game .game__casino>img{
+    position: absolute;
+    top: -50px;
+    left: 41px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+.game>div{
+    margin-bottom: 15px;
+}
+.game .game__rating{
+    position: absolute;
+    right: -4px;
+    top: 28px;
+    width: 99px;
+    height: 19px;
+    background: url("../img/star2.png") repeat-x top left;
+    background-size: 20px 19px;
+}
+.game .game__rating>div{
+    background: url("../img/star1.png") repeat-x top left;
+    height: 18px;
+    width: 18px;
+    background-size: 20px 18px;
+}
+.game .game__bonus{
+    display: inline-block;
+    color: #e6e6e6;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+}
+.game .game__bonus>span{
+    display: block;
+    margin-bottom: 4px;
+}
+.game .game__bonus>span:last-child{
+    margin-bottom: 0;
+}
+.game .game__code{
+    position: relative;
+    top: 7px;
+    right: -2px;
+    padding: 6px;
+    float: right;
+    color: #e6e6e6;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #1a1a1a;
+    border: 2px solid #242424;
+}
+.game .game__buttons{
+    margin-top: 8px;
+}
+/* --------------- /games --------------- */
 
 @media (min-width: 768px){
 
