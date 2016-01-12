@@ -792,6 +792,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 @media (min-width: 1024px){
 
+    .site__content {
+        padding: 0;
+    }
     /* --------------- site__aside --------------- */
     .site__aside__netent a{
         position: relative;
@@ -806,15 +809,16 @@ input[type="search"]::-webkit-search-cancel-button {
     /* --------------- site__content-layout --------------- */
     .site__content-layout{
         width: 745px;
+        display: inline-block;
+        vertical-align: top;
     }
     .site__content{
         width: 1000px;
     }
     .netent__menu > a{
-
         transition: background 0.3s ease;
     }
-    .netent__menu > a.netent__item1:before {
+    .netent__menu > a .netent__item1:before {
         content: '';
         width: 33px;
         height: 31px;
@@ -825,9 +829,7 @@ input[type="search"]::-webkit-search-cancel-button {
         z-index: 1;
     }
     .netent__menu > a:hover, .left-menu > a.active {
-        background: #01702a;
         color: #fff;
-        text-decoration: none;
     }
     /* --------------- /site__content-layout --------------- */
 
@@ -898,6 +900,7 @@ input[type="search"]::-webkit-search-cancel-button {
         text-align: left;
     }
     /* --------------- /text --------------- */
+
     /* --------------- games --------------- */
     .games .game {
         padding-top: 30px;
