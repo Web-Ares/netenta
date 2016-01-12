@@ -36,6 +36,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    background: #0c0c0c;
 }
 .site:after {
     content: '';
@@ -84,6 +85,7 @@
 .site__footer-layout li a{
     font-size: 18px;
     color: #999999;
+    transition: color .3s ease;
 }
 .site__footer-layout li{
     margin-bottom: 4.5px;
@@ -114,6 +116,54 @@
     background: #0c0c0c;
 }
 /* --------------- /site --------------- */
+
+/* --------------- site__aside --------------- */
+.site__aside{
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+.site__aside h2{
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+.site__aside ul{
+    background: #1f1f1f;
+    padding-top: 10px;
+}
+.site__aside ul li a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #e5e5e5;
+    transition: color .3s ease;
+}
+.site__aside__netent,
+.site__aside__new-netent{
+    text-transform: uppercase;
+}
+.site__aside li {
+    padding-bottom: 16px;
+    margin-bottom: 15.5px;
+}
+.site__aside__funding ul li,
+.site__aside__netent ul li,
+.site__aside__new-netent ul li{
+    border-bottom: 1px solid #292929;
+}
+.site__aside__funding ul li:last-child,
+.site__aside__netent ul li:last-child,
+.site__aside__new-netent ul li:last-child{
+    border: none;
+    padding-bottom: 0;
+}
+.site__aside ul li a:hover{
+    color:#7ad340;
+}
+/* --------------- /site__aside --------------- */
 
 /* --------------- social --------------- */
 .social{
@@ -226,7 +276,7 @@
         height: 556px;
     }
     .site__footer-top {
-        height: 50px;
+        height: 44px;
     }
     .site__footer-layout {
         padding-top: 43px;
@@ -251,11 +301,34 @@
     }
     /* --------------- /site__footer --------------- */
 
+    /* --------------- site__aside --------------- */
+    .site__aside ul li a {
+        font-size: 18px;
+    }
+    .site__aside h2 {
+    padding: 11px 10px;
+    font-size: 24px;
+    letter-spacing: 2.3px;
+}
+    .site__aside ul{
+        padding: 20px 10px 5px;
+        margin-bottom: 7px;
+    }
+    .site__aside__popular li{
+        margin-bottom: 12px;
+        padding-bottom: 0;
+    }
+    .site__aside__popular li:last-child{
+        margin-top: 18px;
+        margin-bottom: 15px;
+    }
+    /* --------------- /site__aside --------------- */
+
     /* --------------- social --------------- */
     .social {
         position: absolute;
-        right: 1px;
-        top: 23px;
+        right: 15px;
+        top: 31px;
     }
     /* --------------- /social --------------- */
 
