@@ -331,7 +331,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /btn-up --------------- */
 
-
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
@@ -402,6 +401,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .menu__wrap a:hover span:after,
 .menu__wrap a.active span:after{
+    box-shadow: 0 0 3px #7ad340;
     border-bottom-color: #7ad340;
 }
 .menu__btn {
@@ -696,6 +696,56 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     /* --------------- /site__aside --------------- */
 
+    /* --------------- logo --------------- */
+    .logo{
+        margin-left: -85px;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu__btn:before,
+    .menu__btn:after{
+        left: 15px;
+    }
+    .menu__wrap{
+        width: 240px;
+        padding-top: 83px;
+        padding-left: 24px;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- search --------------- */
+    .search{
+        width: 180px;
+    }
+    .search:before,
+    .search__btn{
+        display: none;
+    }
+    .search__frame{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 8px 2px 0 0;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+    .search__frame input{
+        height: 39px;
+        font-size: 11px;
+    }
+    .search__frame button {
+        top: 9px;
+        right: 4px;
+        width: 32px;
+        height: 38px;
+        background-size: 17px 17px;
+        background-position: 3px 10px;
+    }
+    /* --------------- /search --------------- */
+
     /* --------------- social --------------- */
     .social {
         position: absolute;
@@ -790,8 +840,17 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     /* --------------- /games --------------- */
 }
+
 @media (min-width: 1024px){
 
+    /* --------------- site --------------- */
+    .site__header{
+        height: 83px;
+        border-bottom-width: 1px;
+    }
+    .site__header .search{
+        display: none;
+    }
     .site__content {
         padding: 0;
     }
