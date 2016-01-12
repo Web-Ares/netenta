@@ -349,6 +349,45 @@
 }
 @media (min-width: 1024px){
 
+    /* --------------- site__aside --------------- */
+    .site__aside__netent a{
+        position: relative;
+    }
+    .site__aside{
+        width: 235px;
+        float: right;
+    }
+
+    /* --------------- /site__aside --------------- */
+
+    /* --------------- site__content-layout --------------- */
+    .site__content-layout{
+        width: 745px;
+    }
+    .site__content{
+        width: 1000px;
+    }
+    .netent__menu > a{
+
+        transition: background 0.3s ease;
+    }
+    .netent__menu > a.netent__item1:before {
+        content: '';
+        width: 33px;
+        height: 31px;
+        left: 24px;
+        top: 16px;
+        background: url("../img/aside_01.png") no-repeat;
+        position: absolute;
+        z-index: 1;
+    }
+    .netent__menu > a:hover, .left-menu > a.active {
+        background: #01702a;
+        color: #fff;
+        text-decoration: none;
+    }
+    /* --------------- /site__content-layout --------------- */
+
     /* --------------- site__footer --------------- */
     .site__footer,
     .site__footer-layout {
