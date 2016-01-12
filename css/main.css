@@ -749,6 +749,51 @@ a.btn-play{
 }
 /* --------------- /page-404 --------------- */
 
+/* --------------- preview__games --------------- */
+.preview__games{
+
+}
+.preview__games>ul{
+
+}
+.preview__games>ul>li{
+    position: relative;
+    display: inline-block;
+    border:2px solid transparent;
+}
+.preview__games>ul>li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: -webkit-linear-gradient(top, rgba(101,237,195,0.5) 0%,rgba(122,211,65,0.7) 75%);
+    background: -o-linear-gradient(top, rgba(101,237,195,0.5) 0%,rgba(122,211,65,0.7) 75%);
+    background: linear-gradient(top, rgba(101,237,195,0.5) 0%,rgba(122,211,65,0.7) 75%);
+
+
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.preview__games>ul>li:hover:after{
+    opacity: 1;
+}
+.preview__games>ul>li:hover{
+    border:2px solid #62f0d6;
+}
+
+
+.preview__games-descr{
+    position: absolute;
+}
+/* --------------- /preview__games --------------- */
+
+
 @media (min-width: 768px){
 
     .site__content {
