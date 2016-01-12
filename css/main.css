@@ -814,9 +814,11 @@ a.btn-play{
         font-size: 15px;
         margin-left: 52px;
         vertical-align: middle;
+        width: 131px;
     }
     .game .game__casino>img {
-        top: -8px;
+        top: 50%;
+        margin-top: -15px;
         left: -43px;
     }
     .game .game__rating {
