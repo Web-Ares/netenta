@@ -83,7 +83,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .site__header-layout{
     position: relative;
-    max-width: 960px;
+    max-width: 1000px;
     height: inherit;
     margin: 0 auto;
 }
@@ -339,8 +339,11 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 67px;
     margin-left: -95px;
 }
-.logo img{
+.logo .logo__mobile{
     height: 100%;
+}
+.logo .logo__desktop{
+    display: none;
 }
 /* --------------- /logo --------------- */
 
@@ -846,6 +849,7 @@ input[type="search"]::-webkit-search-cancel-button {
     /* --------------- site --------------- */
     .site__header{
         height: 83px;
+        margin-bottom: 27px;
         border-bottom-width: 1px;
     }
     .site__header .search{
@@ -862,7 +866,6 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 235px;
         float: right;
     }
-
     /* --------------- /site__aside --------------- */
 
     /* --------------- site__content-layout --------------- */
@@ -947,6 +950,52 @@ input[type="search"]::-webkit-search-cancel-button {
         text-align: left;
     }
     /* --------------- /site__footer --------------- */
+
+    /* --------------- menu --------------- */
+    .menu{
+        left: auto;
+        right: 0;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .menu__wrap{
+        position: static;
+        width: auto;
+        padding-top: 31px;
+        background: none;
+        box-shadow: none;
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu__wrap a{
+        display: inline-block;
+        margin-left: 45px;
+        letter-spacing: 0;
+    }
+    .menu__wrap a span{
+        padding-bottom: 34px;
+    }
+    .menu__wrap a span:after{
+        top: 99%;
+        border-bottom-width: 2px;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- logo --------------- */
+    .logo{
+        top: 14px;
+        left: 86px;
+        height: 140px;
+    }
+    .logo .logo__mobile{
+        display: none;
+    }
+    .logo .logo__desktop{
+        display: block;
+        height: 100%;
+    }
+    /* --------------- /logo --------------- */
 
     /* ---------------text --------------- */
     .text{
