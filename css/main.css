@@ -222,6 +222,128 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /site__aside --------------- */
 
+/* --------------- contact --------------- */
+.contact{
+    background: #1f1f1f url("../img/contact-bg.png") no-repeat;
+    background-size: 300px 150px;
+    background-position: center bottom;
+    padding: 0 10px 0;
+    padding-bottom: 150px;
+}
+.contact-us {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 16px auto 0 auto;
+    padding: 15px 0 16px 0;
+}
+.contact .social {
+    text-align: center;
+}
+.contact-us fieldset {
+    position: relative;
+    display: block;
+    vertical-align: top;
+}
+.contact-us fieldset input[type='text'],
+.contact-us fieldset input[type='email'],
+.contact-us fieldset textarea {
+    width: 100%;
+    height: 38px;
+    margin-bottom: 20px;
+    padding: 0 7px 0;
+    border: 1px solid #292929;
+    display: block;
+    color: #c4c4c4;
+    font-size: 11px;
+    background: #141414;
+}
+.contact-us fieldset textarea {
+    width: 100%;
+    height: 79px;
+    padding: 1px 0 0 7px;
+    font-size: 11px;
+}
+.contact-us .submit {
+    position: relative;
+    margin: 17px auto;
+    font-size: 12px;
+    border: 1px solid #f0d543;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+    border-radius: 20px;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+.contact__info{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 26px;
+    width: 100%;
+    height: 140px;
+    background: url("../img/contact-icon03.png") no-repeat;
+    background-size: 80px 75px;
+    background-position: center right;
+    border-bottom: 1px solid #292929;
+    margin-bottom: 10px;
+}
+.contact .social-in,
+.contact .social-t,
+.contact .social-f {
+    margin: 7px 0 0;
+}
+.contact__info a{
+    display: block;
+    position: relative;
+    font-size: 18px;
+    color: #e5e5e5;
+    padding-left: 40px;
+    margin-left: 0;
+}
+.contact__mail{
+    margin-bottom: 50px;
+}
+.contact__mail:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+    width: 35px;
+    height: 35px;
+    background: url(../img/contact-icon02.png) no-repeat center;
+    background-size: contain;
+}
+.contact__web:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+    width: 35px;
+    height: 35px;
+    background: url(../img/contact-icon01.png) no-repeat center;
+    background-size: contain;
+}
+.contact .social a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.contact .social div{
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    margin-left: 40px;
+}
+.contact .social div:first-child{
+    margin-left: 0;
+}
+/* --------------- /contact --------------- */
+
 /* --------------- social --------------- */
 .social{
     position: relative;
@@ -1037,6 +1159,32 @@ a.btn-play{
         line-height: 26px;
     }
     /* --------------- /page-404 --------------- */
+
+    /* --------------- contact --------------- */
+    .contact {
+        background-size: 352px 242px;
+        background-position: 1px 225px;
+        padding: 0 10px 0;
+        padding-bottom: 250px;
+        position: relative;
+        z-index: 3;
+        margin-bottom: 26px;
+    }
+    .contact-us {
+        width: 49%;
+        float: right;
+    }
+    .contact__info {
+        width: 49%;
+    }
+    .contact .social {
+        width: 305px;
+        position: relative;
+    }
+    .contact__info {
+        background-size: 95px 93px;
+    }
+    /* --------------- /contact --------------- */
 }
 
 @media (min-width: 1024px){
