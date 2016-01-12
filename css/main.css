@@ -87,6 +87,9 @@ input[type="search"]::-webkit-search-cancel-button {
     height: inherit;
     margin: 0 auto;
 }
+.site_desktop{
+    display: none;
+}
 .site__footer {
     z-index: 3;
     position: absolute;
@@ -252,7 +255,55 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /social --------------- */
 
-/* --------------- btn-up --------------- */
+/* --------------- btn --------------- */
+.btn{
+    display: inline-block;
+    position: relative;
+    border-width: 1px;
+    color: #fff;
+    overflow: hidden;
+}
+.btn_yellow{
+    display: block;
+    width: 176px;
+    margin-top: 24px;
+    padding: 6px 27px;
+    border-radius: 50px;
+    font-size: 21px;
+    font-weight: 600;
+    border: 1px solid #f0d543;
+    background-color: #f0d543;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btn_yellow:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #0f0e0d;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    z-index: 1;
+}
+.btn_yellow:hover:after{
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+.btn_yellow span{
+    position: relative;
+    z-index: 2;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.btn_yellow:hover span{
+    color: #0f0e0d;
+}
 .btn-up {
     display: none;
     position: fixed;
@@ -326,7 +377,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font-size: 17px;
     float: right;
     right: -2px;
-    background:#999999;
+    background:#999;
     line-height: 31px;
 }
 /* --------------- /btn-up --------------- */
@@ -635,6 +686,34 @@ input[type="search"]::-webkit-search-cancel-button {
  }
 /* --------------- /games --------------- */
 
+/* --------------- page-404 --------------- */
+.page-404{
+    height: 522px;
+    margin: 0 auto;
+    background: url("../img/bg-404.png") no-repeat 65% 15px;
+    background-size: 474px auto;
+}
+.page-404:before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 33%;
+    width: 382px;
+    height: inherit;
+    background: url("../img/bg-404-men.png") no-repeat 0 0;
+    background-size: 100% auto;
+}
+.page-404__content{
+    position: absolute;
+    top: 263px;
+    left: 41%;
+    right: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #e5e5e5;
+}
+/* --------------- /page-404 --------------- */
+
 @media (min-width: 768px){
 
     .site__content {
@@ -698,6 +777,13 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-bottom: 15px;
     }
     /* --------------- /site__aside --------------- */
+
+    /* --------------- btn --------------- */
+    .btn_yellow{
+        width: 200px;
+        margin-top: 32px;
+    }
+    /* --------------- /btn --------------- */
 
     /* --------------- logo --------------- */
     .logo{
@@ -842,6 +928,25 @@ input[type="search"]::-webkit-search-cancel-button {
         float: none;
     }
     /* --------------- /games --------------- */
+
+    /* --------------- page-404 --------------- */
+    .page-404{
+        position: relative;
+        height: 960px;
+        background-position: 65% 37px;
+        background-size: 660px auto;
+    }
+    .page-404:before{
+        top: 45px;
+        right: 36%;
+        width: 507px;
+    }
+    .page-404__content{
+        top: 386px;
+        left: 51%;
+        line-height: 26px;
+    }
+    /* --------------- /page-404 --------------- */
 }
 
 @media (min-width: 1024px){
@@ -854,6 +959,9 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .site__header .search{
         display: none;
+    }
+    .site_desktop{
+        display: block;
     }
     .site__content {
         padding: 0;
@@ -1014,4 +1122,17 @@ input[type="search"]::-webkit-search-cancel-button {
         padding-top: 30px;
     }
     /* --------------- /games --------------- */
+
+    /* --------------- page-404 --------------- */
+    .page-404{
+        background-position: 65% 0;
+    }
+    .page-404:before{
+        top: 0;
+    }
+    .page-404__content{
+        top: 330px;
+    }
+    /* --------------- /page-404 --------------- */
+
 }
