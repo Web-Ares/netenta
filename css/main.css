@@ -981,6 +981,199 @@ a.btn-play{
 }
 /* --------------- /preview__games --------------- */
 
+/* --------------- latest --------------- */
+.latest{
+    margin-bottom: 4px;
+}
+.latest__title{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    color: #7bb020;
+    font-weight: 700;
+    padding: 7px 0 20px 0;
+    width: 81%;
+    line-height: 29px;
+}
+.latest__data {
+    position: absolute;
+    right: 8px;
+    top: 17px;
+    text-align: center;
+    padding-left: 16px;
+}
+.latest__data:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: url("../img/latest-dotted.png") no-repeat;
+    background-size: cover;
+}
+.latest__data span{
+    line-height: 18px;
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+span.latest__data__number{
+    font-size: 24px;
+}
+.latest__item{
+    position: relative;
+    padding: 10px 8px 12px;
+    background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
+    margin-bottom: 13px;
+}
+.latest__bonus {
+    margin-bottom: 19px;
+}
+.latest__bonus dd{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    color: #e5e5e5;
+    font-weight: 700;
+    width: 47%;
+    line-height: 27px;
+}
+.latest__bonus dt{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    color: #e5e5e5;
+    font-weight: 400;
+    width: 51%;
+    line-height: 28px;
+}
+.latest__green{
+    display: block;
+    color: #7bb020;
+}
+.latest__red{
+    display: block;
+    color: #a62a21;
+}
+.latest__code{
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    color: #e6e6e6;
+    font-size: 21px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #1a1a1a;
+    border: 2px solid #242424;
+    margin-bottom: 23px;
+}
+a.btn_latest{
+    width: 100%;
+    height: 40px;
+    line-height: 41px;
+    background: #f0d543;
+    margin-bottom: 21px;
+}
+.latest__rate{
+    margin-bottom: 26px;
+}
+.latest__hand>span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11px;
+    font-size: 18px;
+    color: #e6e6e6;
+}
+.latest__hand>span:first-child{
+    display: none;
+}
+a.latest__hand-down,
+a.latest__hand-up {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 37px;
+    background: #0b1218;
+    border: 1px solid #242424;
+    webkit-transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+}
+a.latest__hand-down{
+    border-radius: 0 5px 5px 0;
+}
+a.latest__hand-up {
+    border-radius: 5px 0 0 5px;
+}
+a.latest__hand-down span,
+a.latest__hand-up span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background: transparent url("../img/latest__rate-icon01.png") no-repeat center;
+    background-size: 15px 16px;
+    webkit-transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+}
+a.latest__hand-down span{
+    background: transparent url("../img/latest__rate-icon02.png") no-repeat center;
+    background-size: 15px 16px;
+}
+a.latest__hand-up:hover span{
+    background: transparent url("../img/latest__rate-icon02-h.png") no-repeat center;
+    background-size: 15px 16px;
+}
+a.latest__hand-down:hover span{
+    background: transparent url("../img/latest__rate-icon01-h.png") no-repeat center;
+    background-size: 15px 16px;
+}
+a.latest__hand-down{
+    margin-left: -5px;
+}
+a.latest__hand-up:hover,
+a.latest__hand-down:hover{
+    background: -webkit-linear-gradient(left, #61f2de 0%,#7ad341 50%);
+    background: -o-linear-gradient(left, #61f2de 0%,#7ad341 50%);
+}
+.latest__valid{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid #242424;
+    padding-bottom: 18px;
+    margin-bottom: 17px;
+}
+.latest__valid-casino .game__casino{
+      display: none;
+  }
+.latest__valid-casino .game__casino:first-child{
+    display: inline-block;
+    margin-left: 0;
+}
+.latest__valid-casino .game__casino {
+    position: relative;
+    color: #acacac;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.latest__valid-casino .game__casino>img {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: -2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+a.game__casino:hover{
+    text-decoration: underline;
+}
+/* --------------- /latest --------------- */
 
 @media (min-width: 768px){
 
@@ -1015,6 +1208,9 @@ a.btn-play{
     }
     .site__footer-super{
         margin-bottom: 25px;
+    }
+    .site__title {
+        letter-spacing: 3px;
     }
     /* --------------- /site__footer --------------- */
 
@@ -1254,6 +1450,91 @@ a.btn-play{
         background-size: 95px 93px;
     }
     /* --------------- /contact --------------- */
+
+    /* --------------- latest --------------- */
+    .latest__item{
+        margin-bottom: 24px;
+    }
+    .latest__data span {
+        padding-left: 35px;
+    }
+    span.latest__data__number {
+        text-align: left;
+        padding-left: 0;
+        font-size: 24px;
+    }
+    .latest__data span:first-child{
+        margin-bottom: -12px;
+    }
+    .latest__data span:last-child{
+        margin-top: -12px;
+    }
+    .latest__valid {
+        text-align: left;
+    }
+    .latest__code {
+        position: absolute;
+        width: 200px;
+        right: 10px;
+        top: 120px;
+    }
+    a.btn_latest {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        right: 10px;
+        top: 180px;
+        font-size: 21px;
+        line-height: 41px;
+    }
+    .latest__hand{
+        position: absolute;
+        right: 11px;
+        top: 297px;
+    }
+    .latest__hand>span:last-child{
+        display: none;
+    }
+    .latest__hand>span:first-child{
+        display: inline-block;
+        margin-right: 11px;
+    }
+    .latest__valid-casino .game__casino {
+        display: inline-block;
+        margin-left: 24px;
+    }
+    .latest__bonus dt {
+        font-size: 18px;
+        width: 25%;
+        margin-bottom: 8px;
+    }
+    .latest__red,
+    .latest__green {
+        display: inline-block;
+    }
+    .latest__title {
+        padding: 7px 0 15px 0;
+    }
+    .latest__data {
+        right: 15px;
+    }
+    .latest__valid {
+        font-size: 18px;
+    }
+    .latest__rate {
+        margin-bottom: 0;
+    }
+    .latest__bonus {
+        margin-bottom: 22px;
+    }
+    a.latest__hand-down, a.latest__hand-up {
+        width: 30px;
+        height: 23px;
+    }
+    .latest__bonus dd {
+        width: 60%;
+    }
+    /* --------------- /latest --------------- */
 }
 
 @media (min-width: 1024px){
@@ -1709,6 +1990,9 @@ a.btn-play{
     .site__content{
         width: 1000px;
     }
+    .site__title {
+        padding: 10px 0 3px 18px;
+    }
     /* --------------- /site__content-layout --------------- */
 
     /* --------------- site__footer --------------- */
@@ -1885,5 +2169,67 @@ a.btn-play{
         top: 330px;
     }
     /* --------------- /page-404 --------------- */
+
+    /* --------------- latest__item --------------- */
+    .latest__item {
+        position: relative;
+        padding: 10px 18px 12px;
+        margin-bottom: 30px;
+    }
+    .latest__title {
+        padding: 11px 0 16px 0;
+    }
+    .latest__bonus dt {
+        width: 21.5%;
+        font-size: 16px;
+    }
+    .latest__bonus dd {
+        font-size: 17px;
+        line-height: 31px;
+    }
+    .latest__bonus {
+        margin-bottom: 15px;
+    }
+    .latest__valid {
+        margin-bottom: 11px;
+    }
+    .latest__item {
+        padding: 10px 20px 9px;
+    }
+    .latest__valid-casino .game__casino {
+        margin-left: 19px;
+    }
+    a.btn_latest {
+        right: 21px;
+        font-size: 15px;
+        line-height: 44px;
+    }
+    .latest__code {
+        right: 21px;
+    }
+    .latest__data {
+        right: 20px;
+        top: 21px;
+    }
+    .latest__code{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .latest__hand {
+        right: 20px;
+        top: 296px;
+    }
+    .latest__hand>span:first-child {
+        font-size: 14px;
+        margin-right: 7px;
+    }
+    a.latest__hand-down, a.latest__hand-up {
+        height: 24px;
+    }
+    .latest__bonus dd {
+        width: 60%;
+        letter-spacing: -0.5px;
+    }
+    /* --------------- /latest__item --------------- */
 
 }
