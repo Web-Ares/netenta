@@ -1100,6 +1100,9 @@ a.btn_latest{
     background: #f0d543;
     margin-bottom: 21px;
 }
+a.btn_latest:before {
+    background: #1f1f1f;
+}
 .latest__rate{
     margin-bottom: 26px;
 }
