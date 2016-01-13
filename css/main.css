@@ -30,15 +30,18 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* --------------- placeholder --------------- */
 ::-webkit-input-placeholder {
+    font-size: 16px;
     color: #666;
     -webkit-transition: color 300ms ease-in-out;
 }
 :-moz-placeholder {
+    font-size: 16px;
     color: #666;
     -webkit-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
 .placeholder {
+    font-size: 16px;
     color: #666;
     -webkit-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
@@ -233,18 +236,27 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* --------------- contact --------------- */
 .contact{
-    background: #1f1f1f url("../img/contact-bg.png") no-repeat;
-    background-size: 300px 150px;
-    background-position: center bottom;
+    position: relative;
+    background: #1f1f1f;
     padding: 0 10px 0;
-    padding-bottom: 150px;
+    padding-bottom: 138px;
+    margin-bottom: 19px;
+}
+.contact_carts{
+    position: absolute;
+    bottom: -15px;
+    width: 291px;
+    height: 162px;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 .contact-us {
     position: relative;
     text-align: center;
     width: 100%;
-    margin: 16px auto 0 auto;
-    padding: 15px 0 16px 0;
+    margin: 0 auto 0 auto;
+    padding: 23px 0 16px 0;
 }
 .contact .social {
     text-align: center;
@@ -259,45 +271,53 @@ input[type="search"]::-webkit-search-cancel-button {
 .contact-us fieldset textarea {
     width: 100%;
     height: 38px;
-    margin-bottom: 20px;
-    padding: 0 7px 0;
+    margin-bottom: 17px;
+    padding: 0 14px 0;
     border: 1px solid #292929;
     display: block;
     color: #c4c4c4;
-    font-size: 11px;
+    font-size: 16px;
     background: #141414;
 }
 .contact-us fieldset textarea {
     width: 100%;
     height: 79px;
-    padding: 1px 0 0 7px;
+    padding: 10px 0 0 14px;
     font-size: 11px;
 }
-.contact-us .submit {
-    position: relative;
-    margin: 17px auto;
-    font-size: 12px;
-    border: 1px solid #f0d543;
-    width: 200px;
-    height: 40px;
-    color: #fff;
-    background: transparent;
+.contact-us input.submit{
     text-transform: uppercase;
-    border-radius: 20px;
-    -webkit-transition: background 0.3s ease;
-    transition: background 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    position: relative;
+    height: 42px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    width: 199px;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 2px solid #f0d543;
+    background: transparent;
+    border-radius: 51px;
+    -webkit-transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+}
+.contact-us input.submit:hover {
+    color: #000;
+    background:#f0d543;
 }
 .contact__info{
     display: inline-block;
     vertical-align: top;
-    padding-top: 26px;
+    padding-top: 12px;
     width: 100%;
-    height: 140px;
+    height: 127px;
     background: url("../img/contact-icon03.png") no-repeat;
-    background-size: 80px 75px;
-    background-position: center right;
+    background-size: 64px 66px;
+    background-position: 100% 35%;
     border-bottom: 1px solid #292929;
-    margin-bottom: 10px;
+    margin-bottom: 26px;
 }
 .contact .social-in,
 .contact .social-t,
@@ -309,11 +329,14 @@ input[type="search"]::-webkit-search-cancel-button {
     position: relative;
     font-size: 18px;
     color: #e5e5e5;
-    padding-left: 40px;
+    padding-left: 48px;
     margin-left: 0;
 }
+.contact__info a:hover{
+    text-decoration: underline;
+}
 .contact__mail{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .contact__mail:before{
     content: "";
@@ -711,7 +734,7 @@ a.btn-play{
     border: 2px solid #424242;
     border-radius: 4px;
     background-color: #292929;
-    font: italic 12px 'roboto', sans-serif;
+    font: italic 14px 'roboto', sans-serif;
 }
 .search__frame button{
     position: absolute;
@@ -1277,7 +1300,7 @@ a.game__casino:hover{
     }
     .search__frame input{
         height: 39px;
-        font-size: 11px;
+        font-size: 14px;
     }
     .search__frame button {
         top: 9px;
@@ -1429,25 +1452,32 @@ a.game__casino:hover{
     .contact {
         background-size: 352px 242px;
         background-position: 1px 225px;
-        padding: 0 10px 0;
-        padding-bottom: 250px;
+        padding: 16px 8px 207px;
         position: relative;
         z-index: 3;
-        margin-bottom: 26px;
+        margin-bottom: 20px;
     }
     .contact-us {
         width: 49%;
         float: right;
+        padding: 10px 0 16px 0;
     }
     .contact__info {
         width: 49%;
     }
     .contact .social {
-        width: 305px;
+        width: 311px;
         position: relative;
     }
+    .contact .social {
+        position: relative;
+        padding-top: 0px;
+    }
     .contact__info {
-        background-size: 95px 93px;
+        margin-bottom: 3px;
+    }
+    .contact-us input.submit {
+        margin-top: 4px;
     }
     /* --------------- /contact --------------- */
 
@@ -2171,6 +2201,9 @@ a.game__casino:hover{
     /* --------------- /page-404 --------------- */
 
     /* --------------- latest__item --------------- */
+    .latest {
+        margin-bottom: 70px;
+    }
     .latest__item {
         position: relative;
         padding: 10px 18px 12px;
@@ -2232,4 +2265,34 @@ a.game__casino:hover{
     }
     /* --------------- /latest__item --------------- */
 
+    /* --------------- contact --------------- */
+    .contact {
+        padding: 16px 18px 186px;
+    }
+    .contact_carts {
+        bottom: -10px;
+        width: 284px;
+    }
+    .contact-us {
+        width: 50%;
+    }
+    .contact-us fieldset input[type='text'],
+    .contact-us fieldset input[type='email'],
+    .contact-us fieldset textarea {
+        margin-bottom: 12px;
+    }
+    .contact-us input.submit {
+        height: 40px;
+        width: 200px;
+    }
+    .contact__info {
+        width: 46%;
+    }
+    .contact__info a {
+        padding-left: 56px;
+    }
+    .contact .social {
+        width: 319px;
+    }
+    /* --------------- /contact --------------- */
 }
