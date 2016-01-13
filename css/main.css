@@ -154,6 +154,15 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     text-align: left;
 }
+.site__title{
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0 10px 6px;
+    font-size: 30px;
+    color: #e5e5e5;
+    letter-spacing: 2.3px;
+}
 .site__aside h2{
     font-family:'Raleway', sans-serif;
     font-weight: 700;
