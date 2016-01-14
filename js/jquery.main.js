@@ -113,6 +113,26 @@ var Slider = function (obj) {
             }
         });
     }
+        if (_obj.parent().hasClass('latest-slider')) {
+            var __swiperPromo = new Swiper(_obj, {
+                nextButton: _next,
+                prevButton: _prev,
+                slidesPerView: 4,
+                spaceBetween: 0,
+                loop: true,
+                breakpoints: {
+                    767: {
+                        slidesPerView: 3
+                    },
+                    600: {
+                        slidesPerView: 2
+                    },
+                    400: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+    }
 
     //public properties
 
