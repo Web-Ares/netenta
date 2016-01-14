@@ -1386,6 +1386,7 @@ a.game__casino:hover{
     margin-left: -2px;
     bottom: -4px;
     z-index: 4;
+    cursor: pointer;
 }
 .game_descr-read:hover{
     opacity: .6;
@@ -1397,7 +1398,6 @@ a.game__casino:hover{
 }
 .game__video-prev>img{
     width: 100%;
-    margin-bottom: 11px;
 }
 .game__video-prev{
     position: relative;
@@ -1406,6 +1406,7 @@ a.game__casino:hover{
 .game__video-controll{
     display: block;
     text-align: justify;
+    padding-top: 11px;
 }
 .game__video-controll a{
     width: 42px;
@@ -1415,6 +1416,7 @@ a.game__casino:hover{
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
     opacity: 1;
+    cursor: pointer;
 }
 .game__video-controll a:hover{
     opacity: 0.6;
@@ -2589,10 +2591,12 @@ a.game__casino:hover{
     }
     .game__video-prev>img {
         width: 100%;
-        margin-bottom: 5px;
     }
     .game__video-controll a {
         margin: 0 18px;
+    }
+    .game__video-controll {
+        padding-top: 5px;
     }
     /* --------------- /single__game --------------- */
 
