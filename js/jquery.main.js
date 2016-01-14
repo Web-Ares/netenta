@@ -4,7 +4,10 @@ $(function(){
         'click':function(){
             $('html, body').animate({scrollTop: 0}, 600);
         }
+
     });
+
+
 
     $(window).on({
         'scroll':function(){
@@ -34,7 +37,45 @@ $(function(){
         }
     });
 
-    $('.swiper-container').each(function () {
+    $.each( $('.hidden-wrap'), function () {
+        new ShowText( $(this) );
+    });
+
+} );
+
+var ShowText = function (obj) {
+
+    var _obj = obj,
+        _btn = _obj.find(".game_descr-read"),
+        _wrap = _obj.find(".game__hidden-wrap");
+
+    var _addEvents = function () {
+            _btn.on({
+                click: function(){
+                    var _innerHeight = _obj.innerHeight(),
+                        _height = _obj.height(),
+                        _paddings = _innerHeight - _height,
+                        _wrapHeight = _wrap.innerHeight();
+                    _btn.remove();
+                    _obj.addClass("active");
+                    _obj.animate({
+                        'height': _paddings + _wrapHeight
+                    }, 300);
+                    setTimeout(function(){
+                        _obj.css({
+                            "height": "auto"
+                        });
+                    },400)
+                }
+            })
+        },
+        _init = function () {
+            _addEvents();
+        };
+
+
+    _init();
+};    $('.swiper-container').each(function () {
         Slider($(this));
     })
 
