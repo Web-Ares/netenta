@@ -41,6 +41,9 @@ $(function(){
         new ShowText( $(this) );
     });
 
+    $('.swiper-container').each(function () {
+        Slider($(this));
+    });
 } );
 
 var ShowText = function (obj) {
@@ -75,11 +78,10 @@ var ShowText = function (obj) {
 
 
     _init();
-};    $('.swiper-container').each(function () {
-        Slider($(this));
-    })
+};
 
-} );
+
+
 
 var Slider = function (obj) {
 
