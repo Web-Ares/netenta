@@ -145,13 +145,9 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #999999;
     font-size: 18px;
 }
-/* --------------- /site --------------- */
-
-/* --------------- site__aside --------------- */
 .site__aside .search{
     display: none;
 }
-
 .site__aside{
     position: relative;
     width: 100%;
@@ -190,7 +186,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .site__aside__new-netent{
     text-transform: uppercase;
 }
-.popular-mobile{
+.site__aside .popular-mobile{
     display: none;
 }
 .site__aside li {
@@ -201,7 +197,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 22px 10px 5px;
     margin-bottom: 7px;
 }
-.new-netent__desktop{
+.site__aside .new-netent__desktop{
     display: none;
 }
 .site__aside__bonus ul li,
@@ -232,7 +228,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 12px;
     padding-bottom: 0;
 }
-/* --------------- /site__aside --------------- */
+/* --------------- /site --------------- */
 
 /* --------------- breadcrums --------------- */
 .breadcrums{
@@ -363,9 +359,10 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #e5e5e5;
     padding-left: 48px;
     margin-left: 0;
+    transition: color .3s ease;
 }
 .contact__info a:hover{
-    text-decoration: underline;
+    color: #7ad341;
 }
 .contact__mail{
     margin-bottom: 40px;
@@ -809,6 +806,14 @@ a.btn-play{
 .games .game:nth-child(2){
     border-top: 2px solid #292929;
 }
+.game .game__flag{
+     width: 30px;
+     height: 30px;
+     border-radius: 30px;
+     background: url("../img/flag1.png");
+     background-size: cover;
+     display: inline-block;
+}
 .game .game__casino{
     position: relative;
     color: #7ad343;
@@ -1079,11 +1084,9 @@ a.paginator__next{
     transition: opacity 0.3s ease;
     border: 3px solid #62f0d6;
 }
-
 .preview__games>div>a:hover:after{
     opacity: 1;
 }
-
 .preview__games>div>a:hover .preview__games-descr{
     opacity: 0;
 }
@@ -1128,7 +1131,6 @@ a.paginator__next{
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
 }
-
 .preview__games>div>a>img{
     width: 240px;
 }
@@ -1295,8 +1297,7 @@ a.latest__hand-down{
 }
 a.latest__hand-up:hover,
 a.latest__hand-down:hover{
-    background: -webkit-linear-gradient(left, #61f2de 0%,#7ad341 50%);
-    background: -o-linear-gradient(left, #61f2de 0%,#7ad341 50%);
+    background: #7ad341;
 }
 .latest__valid{
     text-align: center;
@@ -1319,6 +1320,7 @@ a.latest__hand-down:hover{
     color: #acacac;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    transition: color .3s ease;
 }
 .latest__valid-casino .game__casino>img {
     position: relative;
@@ -1331,7 +1333,7 @@ a.latest__hand-down:hover{
     margin-right: 10px;
 }
 a.game__casino:hover{
-    text-decoration: underline;
+    color: #7ad341;
 }
 /* --------------- /latest --------------- */
 /* --------------- single__game --------------- */
@@ -1447,13 +1449,114 @@ a.game__casino:hover{
 /* --------------- /single__game --------------- */
 
 @media (min-width: 768px) {
+/* --------------- terms --------------- */
+.terms{
+}
+.terms__wrap{
+    position: relative;
+    background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
+    padding: 19px 8px;
+}
+.terms h2{
+    font-family:'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size:24px;
+    font-weight: 400;
+    color: #7ad341;
+    letter-spacing: 0.2px;
+    margin-bottom: 15px;
+}
+.terms p{
+    font-size: 16px;
+    color: #e5e5e5;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    margin-bottom: 23px;
+}
+.terms a{
+    color: #7ad341;
+    transition:color .3s ease;
+  }
+.terms a:hover{
+    color:#999999;
+}
+.terms ul{
+    margin-bottom: 26px;
+    padding-left: 25px;
+}
+.terms li{
+    position: relative;
+    font-size: 16px;
+    color: #e5e5e5;
+    line-height: 21px;
+    margin-bottom: 2px;
+    padding-left: 12px;
+}
+.terms li:before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background:#7ad341;
+}
+.terms dl{
+    font-size: 14px;
+    line-height: 24px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    padding: 13px 0;
+    margin-bottom: 22px;
+}
+.terms dt{
+    display: inline-block;
+    vertical-align: top;
+    width: 71%;
+    border-right: 2px solid #999999;
+    color: #999999;
+ }
+.terms dd{
+    display: inline-block;
+    vertical-align: top;
+    width: 26%;
+    color: #e5e5e5;
+    padding-left: 10px;
+}
+.terms p>span{
+    color: #999999;
+}
+.terms blockquote{
+    position: relative;
+    font-size: 16px;
+    color: #999999;
+    line-height: 23px;
+    padding: 5px 0 0 12px;
+    margin-right: 0;
+    margin-bottom: 13px;
+}
+.terms blockquote:before{
+    content: "";
+    width: 38px;
+    height: 34px;
+    left: -41px;
+    position: absolute;
+    background: url("../img/blockquote-icon.png") no-repeat;
+    background-size: contain;
+}
+.terms blockquote span{
+    color: #7ad341;
+}
+/* --------------- /terms --------------- */
 
+@media (min-width: 768px){
+
+    /* --------------- site --------------- */
     .site__content {
         padding: 0 14px;
     }
-
-    /* --------------- /site__footer --------------- */
-    .site__footer {
+    .site__footer{
         height: 556px;
         padding-top: 44px;
     }
@@ -1491,13 +1594,15 @@ a.game__casino:hover{
     .site__title {
         letter-spacing: 3px;
     }
-    /* --------------- /site__footer --------------- */
-    
-    /* --------------- site__aside --------------- */
     .site__aside ul li a {
         font-size: 18px;
     }
     .site__aside h2 {
+        padding: 11px 10px;
+        font-size: 24px;
+        letter-spacing: 2.3px;
+    }
+    .site__aside ul{
         padding: 11px 10px;
         font-size: 24px;
         letter-spacing: 2.3px;
@@ -1509,6 +1614,22 @@ a.game__casino:hover{
     .site__aside__popular ul li {
         margin-bottom: 13px;
     }
+    .site__aside ul li a {
+        font-size: 18px;
+    }
+    .site__aside h2 {
+        padding: 11px 10px;
+        font-size: 24px;
+        letter-spacing: 2.3px;
+    }
+    .site__aside ul{
+        padding: 20px 10px 5px;
+        margin-bottom: 7px;
+    }
+    .site__aside__popular ul li {
+        margin-bottom: 13px;
+    }
+    /* --------------- /site --------------- */
 
     /* --------------- /site__aside --------------- */
     /* --------------- btn --------------- */
@@ -1889,6 +2010,34 @@ a.game__casino:hover{
         margin: 0 -8px;
     }
     /* --------------- /single__game --------------- */
+
+    /* --------------- terms --------------- */
+    .terms blockquote {
+        font-size: 18px;
+        margin-top: -8px;
+        margin-right: 68px;
+        letter-spacing: 0.3px;
+        padding: 5px 0 0 40px;
+    }
+    .terms blockquote:before {
+        left: -14px;
+    }
+    .terms dt {
+        width: 40%;
+    }
+    .terms dd {
+        width: 30%;
+    }
+    .terms p {
+        font-size: 18px;
+        letter-spacing: 0;
+         margin-bottom: 21px;
+    }
+    .terms dl {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    /* --------------- /terms --------------- */
 }
 
 @media (min-width: 1024px){
@@ -1908,7 +2057,6 @@ a.game__casino:hover{
     .site__content {
         padding: 0;
     }
-    /* --------------- site__aside --------------- */
     .site__aside .search{
         width: 100%;
         display:block;
@@ -1933,7 +2081,7 @@ a.game__casino:hover{
     .site__aside h2 {
         padding: 7px 0 7px 17px;
     }
-    .popular-mobile{
+    .site__aside .popular-mobile{
         display: block;
     }
     .site__aside__bonus{
@@ -2354,9 +2502,6 @@ a.game__casino:hover{
     .site__title {
         padding: 10px 0 3px 18px;
     }
-    /* --------------- /site__content-layout --------------- */
-
-    /* --------------- site__footer --------------- */
     .site__footer,
     .site__footer-layout {
         height: 221px;
@@ -2411,7 +2556,7 @@ a.game__casino:hover{
     .site__footer-super, .site__footer-popular, .site__footer-menu {
         text-align: left;
     }
-    /* --------------- /site__footer --------------- */
+    /* --------------- /site --------------- */
 
     /* --------------- menu --------------- */
     .menu{
@@ -2600,7 +2745,7 @@ a.game__casino:hover{
     }
     /* --------------- /single__game --------------- */
 
-    /* --------------- latest__item --------------- */
+    /* --------------- latest --------------- */
     .latest {
         margin-bottom: 70px;
     }
@@ -2663,7 +2808,7 @@ a.game__casino:hover{
         width: 60%;
         letter-spacing: -0.5px;
     }
-    /* --------------- /latest__item --------------- */
+    /* --------------- /latest --------------- */
 
     /* --------------- contact --------------- */
     .contact {
@@ -2695,4 +2840,51 @@ a.game__casino:hover{
         width: 319px;
     }
     /* --------------- /contact --------------- */
+
+    /* --------------- terms --------------- */
+    .terms{
+        margin-bottom: 50px;
+    }
+    .terms__wrap {
+        padding: 24px 20px 1px 20px;
+    }
+    .terms p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .terms h2 {
+        font-size: 16px;
+        margin-bottom: 11px;
+    }
+    .terms li {
+        font-size: 14px;
+    }
+    .terms dl {
+        font-size: 14px;
+        line-height: 21px;
+        padding: 7px 0;
+        margin-bottom: 31px;
+    }
+    .terms dt {
+         width: 31%;
+     }
+    .terms dd{
+        width: 60%;
+    }
+    .terms blockquote {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.2px;
+        padding: 5px 0 0 37px;
+        margin: 17px 56px 20px 39px;
+    }
+    .terms ul {
+        margin-bottom: 21px;
+    }
+    .terms li {
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+    /* --------------- /terms --------------- */
+
 }
