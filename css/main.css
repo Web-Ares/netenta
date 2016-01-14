@@ -231,6 +231,38 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /site__aside --------------- */
 
+/* --------------- breadcrums --------------- */
+.breadcrums{
+    margin: 17px 6px 14px;
+    font-size: 14px;
+}
+.breadcrums a{
+    position: relative;
+    margin-right: 22px;
+    border-bottom: 1px solid transparent;
+    color: #696969;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.breadcrums a:hover{
+    border-bottom-color: #696969;
+}
+.breadcrums a:after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 100%;
+    width: 7px;
+    height: 12px;
+    margin-left: 8px;
+    background: url("../img/icons-breadcrumbs.png") no-repeat 0 0;
+    background-size: cover;
+}
+.breadcrums span{
+    color: #cdcdcd;
+}
+/* --------------- /breadcrums --------------- */
+
 /* --------------- contact --------------- */
 .contact{
     background: #1f1f1f url("../img/contact-bg.png") no-repeat;
@@ -754,14 +786,6 @@ a.btn-play{
 .games .game:nth-child(2){
     border-top: 2px solid #292929;
 }
- .game .game__flag{
-     width: 30px;
-     height: 30px;
-     border-radius: 30px;
-     background: url("../img/flag1.png");
-     background-size: cover;
-     display: inline-block;
-}
 .game .game__casino{
     position: relative;
     color: #7ad343;
@@ -851,6 +875,116 @@ a.btn-play{
     left: -129px;
 }
 /* --------------- /games --------------- */
+
+/* --------------- flag --------------- */
+.flag{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-size: cover;
+    display: inline-block;
+}
+.flag.us{
+    background-image: url("../img/flag1.png");
+}
+/* --------------- /flag --------------- */
+
+/* --------------- coutry-slider --------------- */
+.coutry-slider{
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.coutry-slider .flag{
+    margin-bottom: 7px;
+}
+.coutry-slider .flag:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    border-radius: 50px;
+    background: rgb(92,244,223);
+    background: -moz-linear-gradient(top,  rgba(92,244,223,1) 0%, rgba(125,209,71,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(92,244,223,1) 0%,rgba(125,209,71,1) 100%);
+    background: linear-gradient(to bottom,  rgba(92,244,223,1) 0%,rgba(125,209,71,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cf4df', endColorstr='#7dd147',GradientType=0 );
+    opacity: 0;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.coutry-slider .flag:hover:after{
+    opacity: 1
+}
+.coutry-slider .swiper-container{
+    position: relative;
+}
+.coutry-slider .swiper-slide{
+    padding-top: 2px;
+    text-align: center;
+    color: #999;
+}
+.coutry-slider .swiper-button-prev,
+.coutry-slider .swiper-button-next{
+    top: 0;
+    width: 17px;
+    height: 73px;
+    background: url("../img/icons-arrows.png") no-repeat 0 50%;
+}
+.coutry-slider .swiper-button-prev{
+    left: -6px;
+}
+.coutry-slider .swiper-button-next{
+    right: -6px;
+    background-position: -18px 50%;
+}
+/* --------------- /coutry-slider --------------- */
+
+/* --------------- paginator --------------- */
+.paginator{
+    margin-bottom: 25px;
+    padding: 17px 0 7px;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.paginator a,
+.paginator span{
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 10px;;
+}
+.paginator a{
+    color: #e6e6e6;
+}
+.paginator span{
+    font-size: 19px;
+    font-weight: 600;
+    color: #79d33e;
+}
+a.paginator__prev,
+a.paginator__next{
+    position: relative;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 1px solid #232323;
+    border-radius: 3px;
+    background-image: url("../img/icons-arrows.png");
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    background-color: #161422;
+}
+a.paginator__next{
+    background-position: -11px 6px;
+}
+/* --------------- /paginator --------------- */
 
 /* --------------- page-404 --------------- */
 .page-404{
@@ -982,94 +1116,108 @@ a.btn-play{
 /* --------------- /preview__games --------------- */
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
     .site__content {
         padding: 0 14px;
     }
+
     /* --------------- /site__footer --------------- */
-    .site__footer{
+    .site__footer {
         height: 556px;
         padding-top: 44px;
     }
+
     .site__footer-layout {
         height: 506px;
     }
+
     .site:after {
         height: 556px;
     }
+
     .site__footer-layout {
         padding-top: 43px;
     }
-    .site__footer-layout li a{
+
+    .site__footer-layout li a {
         font-size: 18px;
     }
-    .site__footer-logo{
+
+    .site__footer-logo {
         position: absolute;
         top: 45px;
         left: 14px;
     }
+
     .site__footer-menu {
         display: inline-block;
         vertical-align: top;
     }
-    .site__footer-super{
+
+    .site__footer-super {
         margin-bottom: 25px;
     }
-    /* --------------- /site__footer --------------- */
 
+    /* --------------- /site__footer --------------- */
     /* --------------- site__aside --------------- */
     .site__aside ul li a {
         font-size: 18px;
     }
+
     .site__aside h2 {
-    padding: 11px 10px;
-    font-size: 24px;
-    letter-spacing: 2.3px;
-}
-    .site__aside ul{
+        padding: 11px 10px;
+        font-size: 24px;
+        letter-spacing: 2.3px;
+    }
+
+    .site__aside ul {
         padding: 20px 10px 5px;
         margin-bottom: 7px;
     }
+
     .site__aside__popular ul li {
         margin-bottom: 13px;
     }
-    /* --------------- /site__aside --------------- */
 
+    /* --------------- /site__aside --------------- */
     /* --------------- btn --------------- */
-    .btn_yellow{
+    .btn_yellow {
         width: 200px;
         margin-top: 32px;
     }
-    /* --------------- /btn --------------- */
 
+    /* --------------- /btn --------------- */
     /* --------------- logo --------------- */
-    .logo{
+    .logo {
         margin-left: -85px;
     }
-    /* --------------- /logo --------------- */
 
+    /* --------------- /logo --------------- */
     /* --------------- menu --------------- */
     .menu__btn:before,
-    .menu__btn:after{
+    .menu__btn:after {
         left: 15px;
     }
-    .menu__wrap{
+
+    .menu__wrap {
         width: 240px;
         padding-top: 83px;
         padding-left: 24px;
     }
-    /* --------------- /menu --------------- */
 
+    /* --------------- /menu --------------- */
     /* --------------- search --------------- */
-    .search{
+    .search {
         width: 180px;
     }
+
     .search:before,
-    .search__btn{
+    .search__btn {
         display: none;
     }
-    .search__frame{
+
+    .search__frame {
         position: relative;
         top: 0;
         right: 0;
@@ -1079,10 +1227,12 @@ a.btn-play{
         opacity: 1;
         visibility: visible;
     }
-    .search__frame input{
+
+    .search__frame input {
         height: 39px;
         font-size: 11px;
     }
+
     .search__frame button {
         top: 9px;
         right: 4px;
@@ -1091,16 +1241,16 @@ a.btn-play{
         background-size: 17px 17px;
         background-position: 3px 10px;
     }
-    /* --------------- /search --------------- */
 
+    /* --------------- /search --------------- */
     /* --------------- social --------------- */
     .social {
         position: absolute;
         right: 15px;
         top: 31px;
     }
-    /* --------------- /social --------------- */
 
+    /* --------------- /social --------------- */
     /* --------------- btn-up --------------- */
     .btn-up {
         background: url("../img/top.png") no-repeat;
@@ -1108,43 +1258,50 @@ a.btn-play{
         width: 90px;
         height: 155px;
     }
-    /* --------------- btn-up --------------- */
 
+    /* --------------- btn-up --------------- */
     /* ---------------text --------------- */
     .text p {
         font-size: 18px;
         line-height: 22px;
     }
-    /* --------------- /text --------------- */
 
+    /* --------------- /text --------------- */
     /* --------------- games --------------- */
-    .games .games__head{
+    .games .games__head {
         display: block;
     }
-    .games{
+
+    .games {
         padding: 20px 9px 0;
     }
-    .game .games-tablet{
+
+    .game .games-tablet {
         margin: 0;
         float: right;
         position: relative;
         left: 15px;
         top: -7px;
     }
-    .game .games-tablet>div{
+
+    .game .games-tablet > div {
         vertical-align: middle;
         margin-bottom: 0;
         margin-top: 0;
     }
-    .games__head-casino{
+
+    .games__head-casino {
         margin-right: 20px;
     }
-    .games__head-rating{
+
+    .games__head-rating {
         margin-right: 6px;
     }
-    .games__head-bonus{
+
+    .games__head-bonus {
         margin-right: 6px;
     }
+
     .game .game__casino {
         display: inline-block;
         font-size: 15px;
@@ -1152,11 +1309,13 @@ a.btn-play{
         vertical-align: middle;
         width: 131px;
     }
-    .game .game__casino>img {
+
+    .game .game__casino > img {
         top: 50%;
         margin-top: -15px;
         left: -43px;
     }
+
     .game .game__rating {
         position: initial;
         display: inline-block;
@@ -1166,20 +1325,24 @@ a.btn-play{
         width: 85px;
         margin-right: 28px;
     }
-    .game .game__rating>div {
+
+    .game .game__rating > div {
         background: url("../img/star1.png") repeat-x top left;
         height: 18px;
         width: 18px;
         background-size: 17px 16px;
     }
+
     .game .game__bonus {
         font-size: 15px;
     }
+
     .game .game__bonus {
         margin-right: 13px;
         position: relative;
         top: -4px;
     }
+
     .game .game__code {
         float: none;
         display: inline-block;
@@ -1187,10 +1350,12 @@ a.btn-play{
         margin-right: 21px;
         top: -3px;
     }
+
     .game .game__buttons {
         display: inline-block;
         margin-right: 16px;
     }
+
     a.btn-play {
         display: block;
         width: 100px;
@@ -1199,16 +1364,31 @@ a.btn-play{
         line-height: 21px;
         margin-bottom: 4px;
     }
+
     a.btn-all {
         float: none;
     }
-    .game .game__flag {
-        vertical-align: middle;
-    }
-    .preview__games>div{
+
+    .preview__games > div {
         display: inline-block;
     }
+
     /* --------------- /games --------------- */
+
+    /* --------------- flag --------------- */
+    .flag {
+        vertical-align: middle;
+    }
+    /* --------------- /flag --------------- */
+
+    /* --------------- paginator --------------- */
+    .paginator {
+        font-size: 17px;
+    }
+    .paginator a, .paginator span{
+        margin: 0 12px;
+    }
+    /* --------------- /paginator --------------- */
 
     /* --------------- page-404 --------------- */
     .page-404{
@@ -1226,6 +1406,15 @@ a.btn-play{
         top: 386px;
         left: 51%;
         line-height: 26px;
+    }
+    .paginator a:hover{
+        text-decoration: underline;
+    }
+    a.paginator__prev:hover,
+    a.paginator__next:hover{
+        background-color: #232323;
+        transition: background-color .3s ease;
+        -webkit-transition: background-color .3s ease;
     }
     /* --------------- /page-404 --------------- */
 
@@ -1700,6 +1889,13 @@ a.btn-play{
     }
     /* --------------- /site__aside --------------- */
 
+    /* --------------- breadcrums --------------- */
+    .breadcrums{
+        margin: 33px 6px 24px;
+        padding-left: 188px;
+    }
+    /* --------------- /breadcrums --------------- */
+
     /* --------------- site__content-layout --------------- */
     .site__content-layout{
         width: 745px;
@@ -1849,10 +2045,6 @@ a.btn-play{
         position: relative;
         top: -4px;
     }
-    .game .game__flag {
-        width: 32px;
-        height: 32px;
-    }
     .game .game__casino>img {
         left: -40px;
     }
@@ -1873,6 +2065,19 @@ a.btn-play{
         left: -116px;
     }
     /* --------------- /games --------------- */
+
+    /* --------------- flag --------------- */
+    .flag {
+        width: 32px;
+        height: 32px;
+    }
+    /* --------------- /flag --------------- */
+
+    /* --------------- paginator --------------- */
+    .paginator{
+        padding: 23px 0 7px
+    }
+    /* --------------- /paginator --------------- */
 
     /* --------------- page-404 --------------- */
     .page-404{

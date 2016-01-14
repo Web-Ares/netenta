@@ -34,4 +34,45 @@ $(function(){
         }
     });
 
+    $('.swiper-container').each(function () {
+        Slider($(this));
+    })
+
 } );
+
+var Slider = function (obj) {
+
+    //private properties
+    var _self = this,
+        _next = obj.parent().find($('.swiper-button-next')),
+        _prev = obj.parent().find($('.swiper-button-prev')),
+        _obj = obj;
+
+    //private methods
+    var _addEvents = function () {
+
+        },
+        _init = function () {
+            _addEvents();
+        };
+    if (_obj.parent().hasClass('coutry-slider')) {
+        var _swiperPromo = new Swiper(_obj, {
+            nextButton: _next,
+            prevButton: _prev,
+            slidesPerView: 13,
+            spaceBetween: 0,
+            loop: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 5
+                }
+            }
+        });
+    }
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
