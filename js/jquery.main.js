@@ -37,7 +37,7 @@ $(function(){
         }
     });
 
-    $.each( $('.single__game-description'), function () {
+    $.each( $('.hidden-wrap'), function () {
         new ShowText( $(this) );
     });
 
@@ -47,7 +47,7 @@ var ShowText = function (obj) {
 
     var _obj = obj,
         _btn = _obj.find(".game_descr-read"),
-        _wrap = _obj.find(".hidden-wrap");
+        _wrap = _obj.find(".game__hidden-wrap");
 
     var _addEvents = function () {
             _btn.on({
