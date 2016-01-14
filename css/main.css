@@ -2387,6 +2387,13 @@ a.game__casino:hover{
     }
     /* --------------- /flag --------------- */
 
+    /* --------------- coutry-slider --------------- */
+    .coutry-slider .swiper-button-prev,
+    .coutry-slider .swiper-button-next{
+        top: 7px;
+    }
+    /* --------------- /coutry-slider --------------- */
+
     /* --------------- paginator --------------- */
     .paginator{
         padding: 23px 0 7px
