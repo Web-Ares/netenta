@@ -1516,7 +1516,7 @@ a.game__casino:hover{
     width: 71%;
     border-right: 2px solid #999999;
     color: #999999;
- }
+}
 .terms dd{
     display: inline-block;
     vertical-align: top;
@@ -1549,6 +1549,10 @@ a.game__casino:hover{
     color: #7ad341;
 }
 /* --------------- /terms --------------- */
+
+/* --------------- faq --------------- */
+
+/* --------------- /faq --------------- */
 
 @media (min-width: 768px){
 
