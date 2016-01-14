@@ -37,6 +37,7 @@ $(function(){
         }
     });
 
+
     $.each( $('.hidden-wrap'), function () {
         new ShowText( $(this) );
     });
