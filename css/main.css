@@ -296,6 +296,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .contact .social {
     text-align: center;
+    width: 300px;
 }
 .contact-us fieldset {
     position: relative;
@@ -411,11 +412,18 @@ input[type="search"]::-webkit-search-cancel-button {
 .contact .social div:first-child{
     margin-left: 0;
 }
+.btn_contact{
+    font-size: 18px !important;
+    width: 200px !important;
+    margin: 7px auto 5px !important;
+    padding: 9px 27px !important;
+}
 /* --------------- /contact --------------- */
 
 /* --------------- social --------------- */
 .social{
     position: relative;
+    width: 200px;
     padding-top: 6px;
     margin-bottom: 22px;
 }
@@ -3326,7 +3334,7 @@ a.game__casino:hover{
         padding: 16px 18px 186px;
     }
     .contact_carts {
-        bottom: -10px;
+        bottom: -14px;
         width: 284px;
     }
     .contact-us {
