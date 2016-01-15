@@ -2199,6 +2199,7 @@ a.game__casino:hover{
     }
     .game .game__rating {
         margin-right: 28px;
+        position: static;
     }
     .game__rating > div {
         background: url("../img/star1.png") repeat-x top left;
