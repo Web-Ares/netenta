@@ -62,8 +62,8 @@ input[type="search"]::-webkit-search-cancel-button {
     position: relative;
     z-index: 1;
     background: #0c0c0c url("../img/site-bg.png") no-repeat;
-    background-position: right top;
-    background-size: 200px 200px;
+    background-position: 105px 0;
+    background-size: 324px 306px;
 }
 .site:after {
     content: '';
@@ -474,6 +474,30 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #fff;
     overflow: hidden;
 }
+.btn:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    z-index: 1;
+}
+.btn:hover:after{
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+.btn span{
+    position: relative;
+    z-index: 2;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
 .btn_yellow{
     display: block;
     width: 176px;
@@ -488,32 +512,42 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
 }
 .btn_yellow:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
     background-color: #0f0e0d;
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    -webkit-transition: -webkit-transform 300ms ease-out;
-    transition: transform 300ms ease-out;
-    z-index: 1;
-}
-.btn_yellow:hover:after{
-    -webkit-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-}
-.btn_yellow span{
-    position: relative;
-    z-index: 2;
-    transition: color .3s ease;
-    -webkit-transition: color .3s ease;
 }
 .btn_yellow:hover span{
     color: #0f0e0d;
+}
+.btn_yellow-small{
+    display: inline-block;
+    width: 138px;
+    margin-top: 0;
+    padding: 8px 0;
+    vertical-align: top;
+}
+.btn_yellow-small:after{
+    background-color: #1f1f1f;
+}
+.btn_gray{
+    display: inline-block;
+    width: 138px;
+    padding: 12px 0;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #999;
+    background-color: #999;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.btn_gray:after{
+    background-color: #1f1f1f;
+}
+.btn_gray span{
+    color: #999;
+}
+.btn_gray:hover span{
+    color: #fff;
 }
 .btn-up {
     display: none;
@@ -834,16 +868,21 @@ a.btn-play{
 .game div{
     margin-bottom: 15px;
 }
+.game__rating{
+    display: inline-block;
+    vertical-align: middle;
+    width: 99px;
+    height: 19px;
+    margin: 0 auto;
+    background: url("../img/star2.png") repeat-x top left;
+    background-size: 20px 19px;
+}
 .game .game__rating{
     position: absolute;
     right: -4px;
     top: 28px;
-    width: 99px;
-    height: 19px;
-    background: url("../img/star2.png") repeat-x top left;
-    background-size: 20px 19px;
 }
-.game .game__rating>div{
+.game__rating>div{
     background: url("../img/star1.png") repeat-x top left;
     height: 18px;
     width: 18px;
@@ -1401,7 +1440,17 @@ a.latest__hand-down:hover{
 a.game__casino:hover{
     color: #7ad341;
 }
+.latest__more{
+    display: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+}
+.latest__more a{
+    color: #7ad340;
+}
 /* --------------- /latest --------------- */
+
 /* --------------- single__game --------------- */
 .single__game-warning{
     position: relative;
@@ -1610,9 +1659,340 @@ a.game__casino:hover{
 }
 /* --------------- /terms --------------- */
 
-/* --------------- faq --------------- */
+/* --------------- single-game --------------- */
+.single-game{
+    position: relative;
+    margin-bottom: 7px;
+    padding: 23px 0 15px;
+    background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
+}
+.single-game__frame{
+    width: 100%;
+    padding: 0 9px;
+    overflow: hidden;
+}
+.single-game__frame img,
+.single-game__frame iframe{
+    display: block;
+    width: 100%;
+}
+.single-game__locate{
+    position: absolute;
+    top: 23px;
+    left: 9px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #e5e5e5;
+}
+.single-game__info{
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 100px;
+    text-align: center;
+}
+.single-game__logo{
+    position: absolute;
+    top: 0;
+    right: 9px;
+    width: 139px;
+    height: 80px;
+    overflow: hidden;
+}
+.single-game__logo > div{
+    display: table-cell;
+    width: 100%;
+    height: 80px;
+    vertical-align: middle;
+}
+.single-game__logo img{
+    width: 100%;
+}
+.single-game__rating{
+    padding-left: 30px;
+    font-size: 16px;
+    color: #ccc;
+    text-align: left;
+}
+.single-game__rating span{
+    font-size: 18px;
+    font-weight: 700;
+    color: #7ad340;
+}
+.single-game__rating .game__rating{
+    margin: 0 15px 0 7px;
+}
+.single-game__btn-wrap{
+    margin-bottom: 6px;
+    padding: 0 9px;
+    text-align: justify;
+}
+.single-game__btn-wrap:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.single-game__quoter{
+    padding: 21px 9px 11px;
+    border-top: 1px solid #292929;
+    font-size: 18px;
+    line-height: 23px;
+    color: #999;
+    background: url("../img/icons-quotes.png") no-repeat 8px 63px;
+    background-size: 38px;
+}
+.single-game__quoter p{
+    margin-left: 52px;
+}
+.single-game__quoter-title{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #e5e5e5;
+}
+/* --------------- /single-game --------------- */
 
+/* --------------- faq --------------- */
+.faq{
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 31px;
+    overflow: hidden;
+}
+.faq > dl {
+    padding: 15px 9px 0;
+    font-size: 18px;
+    line-height: 31px;
+    color: #e5e5e5;
+    background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
+}
+.faq dt {
+    font-weight: 700;
+    color: #7ad340;
+}
+.faq dd {
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #292929;
+}
+.faq dd:last-child{
+    margin-bottom: 0;
+    border-bottom: none;
+}
 /* --------------- /faq --------------- */
+
+/* --------------- bonus --------------- */
+.bonus__item{
+    width: 237px;
+    margin: 0 auto 10px;
+    padding: 11px 11px 0;
+    border: 1px solid #383838;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 8px #000;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+.bonus__item > span{
+    text-transform: uppercase;
+}
+.bonus__signup{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7ad340;
+}
+.bonus__price{
+    display: block;
+    height: 165px;
+    margin-bottom: 9px;
+    padding-top: 55px;
+    font-size: 30px;
+    color: #fff;
+    background: url("../img/bg-bonus.jpg") no-repeat top center;
+    background-size: cover;
+}
+.bonus__price span{
+    display: block;
+}
+.bonus__code{
+    display: block;
+    height: 35px;
+    margin: 7px 7px 12px;
+    padding-top: 9px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0b1703;
+    border-radius: 5px;
+    background-color: #7ad340;
+}
+.bonus__condition{
+    text-align: justify;
+}
+.bonus__condition:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.bonus__condition li{
+    display: inline-block;
+    text-align: center;
+    width: 49%;
+    line-height: 19px;
+}
+.bonus__condition li b{
+    display: block;
+    margin: 0 auto;
+}
+/* --------------- /bonus --------------- */
+
+/* --------------- review --------------- */
+.review__frame{
+    position: relative;
+    padding: 16px 9px 0;
+    background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
+}
+.review__form{
+    margin-bottom: 15px;
+    padding-bottom: 21px;
+    border-bottom: 2px solid #3d3d3d;
+    text-align: right;
+}
+.review__form textarea{
+    width: 100%;
+    margin-bottom: 19px;
+    height: 175px;
+    padding: 13px;
+    border: 1px solid #292929;
+    border-radius: 2px;
+    background-color: #141414;
+}
+.review__casino{
+    display: block;
+    margin-bottom: 21px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #7ad340;
+}
+.review__close{
+    position: absolute;
+    top: 20px;
+    right: 9px;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    border: 1px solid #292929;
+    border-radius: 2px;
+    background: #1f1f1f url("../img/icons-clode.png") center no-repeat;
+    background-size: 11px;
+}
+.review__close:after{
+    left: 0;
+    top: 0;
+    width: 12px;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+}
+.review__rating{
+    margin-bottom: 17px;
+    font-size: 21px;
+    color: #e5e5e5;
+}
+.review__rating .game__rating{
+    margin-right: 4px;
+}
+.review__name{
+    display: block;
+    margin-bottom: 11px;
+    font-size: 15px;
+    color: #999;
+}
+.review__name span{
+    font-size: 18px;
+    color: #e5e5e5;
+}
+.reviews__tabs li{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    padding: 8px 24px 6px;
+    border: 1px solid #999;
+    border-radius: 50px;
+    background-color: #999;
+    color: #999;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+.reviews__tabs li + li{
+    border-color: #7ad340;
+    background-color: #7ad340;
+    color: #7ad340;
+}
+.reviews__tabs li + li + li{
+    border-color: #a62a21;
+    background-color: #a62a21;
+    color: #a62a21;
+}
+.reviews__tabs li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #1f1f1f;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    z-index: 1;
+}
+.reviews__tabs li:hover:after{
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+.reviews__tabs li span{
+    position: relative;
+    z-index: 2;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.reviews__tabs li:hover span{
+    color: #1f1f1f;
+}
+.review__item{
+    margin-bottom: 19px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #3d3d3d;
+    font-size: 21px;
+    line-height: 27px;
+    color: #e5e5e5;
+}
+.review__item:last-child{
+    border-bottom: none;
+}
+.review__item .flag{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+.review__user{
+    margin-right: 10px;
+    font-size: 24px;
+    color: #7ad340;
+}
+.review__assessment{
+    margin: 13px 0;
+}
+.review__assessment .game__rating{
+    margin-left: 25px;
+}
+/* --------------- /review --------------- */
 
 @media (min-width: 768px){
 
@@ -1627,34 +2007,27 @@ a.game__casino:hover{
         height: 556px;
         padding-top: 44px;
     }
-
     .site__footer-layout {
         height: 506px;
     }
-
     .site:after {
         height: 556px;
     }
-
     .site__footer-layout {
         padding-top: 43px;
     }
-
     .site__footer-layout li a {
         font-size: 18px;
     }
-
     .site__footer-logo {
         position: absolute;
         top: 45px;
         left: 14px;
     }
-
     .site__footer-menu {
         display: inline-block;
         vertical-align: top;
     }
-
     .site__footer-super {
         margin-bottom: 25px;
     }
@@ -1665,10 +2038,10 @@ a.game__casino:hover{
         font-size: 18px;
     }
     .site__aside h2 {
-    padding: 11px 10px;
-    font-size: 24px;
-    letter-spacing: 2.3px;
-}
+        padding: 11px 10px;
+        font-size: 24px;
+        letter-spacing: 2.3px;
+    }
     .site__aside ul {
         padding: 20px 10px 5px;
         margin-bottom: 7px;
@@ -1678,43 +2051,45 @@ a.game__casino:hover{
     }
     /* --------------- /site__aside --------------- */
 
-    /* --------------- /site__aside --------------- */
     /* --------------- btn --------------- */
     .btn_yellow {
         width: 200px;
         margin-top: 32px;
     }
-
+    .btn_gray{
+        width: 198px;
+        padding: 12px 0 10px;
+        font-size: 16px;
+    }
     /* --------------- /btn --------------- */
+
     /* --------------- logo --------------- */
     .logo {
         margin-left: -85px;
     }
 
     /* --------------- /logo --------------- */
+
     /* --------------- menu --------------- */
     .menu__btn:before,
     .menu__btn:after {
         left: 15px;
     }
-
     .menu__wrap {
         width: 240px;
         padding-top: 83px;
         padding-left: 24px;
     }
-
     /* --------------- /menu --------------- */
+
     /* --------------- search --------------- */
     .search {
         width: 180px;
     }
-
     .search:before,
     .search__btn {
         display: none;
     }
-
     .search__frame {
         position: relative;
         top: 0;
@@ -1725,12 +2100,10 @@ a.game__casino:hover{
         opacity: 1;
         visibility: visible;
     }
-
     .search__frame input {
         height: 39px;
         font-size: 14px;
     }
-
     .search__frame button {
         top: 9px;
         right: 4px;
@@ -1739,8 +2112,8 @@ a.game__casino:hover{
         background-size: 17px 17px;
         background-position: 3px 10px;
     }
-
     /* --------------- /search --------------- */
+
     /* --------------- social --------------- */
     .social {
         position: absolute;
@@ -1749,6 +2122,7 @@ a.game__casino:hover{
     }
 
     /* --------------- /social --------------- */
+
     /* --------------- btn-up --------------- */
     .btn-up {
         background: url("../img/top.png") no-repeat;
@@ -1756,24 +2130,22 @@ a.game__casino:hover{
         width: 90px;
         height: 155px;
     }
-
     /* --------------- btn-up --------------- */
+
     /* ---------------text --------------- */
     .text p {
         font-size: 18px;
         line-height: 22px;
     }
-
     /* --------------- /text --------------- */
+
     /* --------------- games --------------- */
     .games .games__head {
         display: block;
     }
-
     .games {
         padding: 20px 9px 0;
     }
-
     .game .games-tablet {
         margin: 0;
         float: right;
@@ -1781,25 +2153,20 @@ a.game__casino:hover{
         left: 15px;
         top: -7px;
     }
-
     .game .games-tablet > div {
         vertical-align: middle;
         margin-bottom: 0;
         margin-top: 0;
     }
-
     .games__head-casino {
         margin-right: 20px;
     }
-
     .games__head-rating {
         margin-right: 6px;
     }
-
     .games__head-bonus {
         margin-right: 6px;
     }
-
     .game .game__casino {
         display: inline-block;
         font-size: 15px;
@@ -1807,40 +2174,36 @@ a.game__casino:hover{
         vertical-align: middle;
         width: 131px;
     }
-
     .game .game__casino > img {
         top: 50%;
         margin-top: -15px;
         left: -43px;
     }
-
-    .game .game__rating {
+    .game__rating {
         position: initial;
         display: inline-block;
         background: url("../img/star2.png") repeat-x top left;
         background-size: 17px 17px;
         height: 22px;
         width: 85px;
+    }
+    .game .game__rating {
         margin-right: 28px;
     }
-
-    .game .game__rating > div {
+    .game__rating > div {
         background: url("../img/star1.png") repeat-x top left;
         height: 18px;
         width: 18px;
         background-size: 17px 16px;
     }
-
     .game .game__bonus {
         font-size: 15px;
     }
-
     .game .game__bonus {
         margin-right: 13px;
         position: relative;
         top: -4px;
     }
-
     .game .game__code {
         float: none;
         display: inline-block;
@@ -1848,12 +2211,10 @@ a.game__casino:hover{
         margin-right: 21px;
         top: -3px;
     }
-
     .game .game__buttons {
         display: inline-block;
         margin-right: 16px;
     }
-
     a.btn-play {
         display: block;
         width: 100px;
@@ -1862,15 +2223,12 @@ a.game__casino:hover{
         line-height: 21px;
         margin-bottom: 4px;
     }
-
     a.btn-all {
         float: none;
     }
-
     .preview__games > div {
         display: inline-block;
     }
-
     /* --------------- /games --------------- */
 
     /* --------------- flag --------------- */
@@ -2085,6 +2443,92 @@ a.game__casino:hover{
         line-height: 25px;
     }
     /* --------------- /terms --------------- */
+
+    /* --------------- single-game --------------- */
+    .single-game{
+        padding-bottom: 23px;
+    }
+    .single-game__locate{
+        top: 28px;
+        left: 11px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .single-game__locate .flag{
+        margin-bottom: 9px;
+    }
+    .single-game__info{
+        margin: 0 225px 30px;
+        padding-top: 0;
+    }
+    .single-game__logo{
+        position: static;
+        display: block;
+        margin: 0 auto 11px;
+        width: 197px;
+    }
+    .single-game__rating{
+        padding-left: 0;
+        text-align: center;
+    }
+    .single-game__rating .game__rating {
+        margin: 0 28px 0 11px;
+    }
+    .single-game__btn-wrap a{
+        display: block;
+        margin-top: 0;
+        margin-bottom: 31px;
+    }
+    .single-game__btn-wrap{
+        position: absolute;
+        top: 24px;
+        right: -3px;
+    }
+    .single-game__quoter{
+        padding-bottom: 19px;
+        background-position: 37px 61px;
+    }
+    .single-game__quoter p {
+        margin-left: 81px;
+    }
+    /* --------------- /single-game --------------- */
+
+    /* --------------- faq --------------- */
+    .faq > dl{
+        line-height: 34px;
+    }
+    .faq dd {
+        margin-bottom: 17px;
+        padding-bottom: 14px;
+    }
+    /* --------------- /faq --------------- */
+
+    /* --------------- bonus --------------- */
+    .bonus{
+        margin-bottom: 17px;
+        text-align: justify;
+    }
+    .bonus__item{
+        display: inline-block;
+    }
+    .bonus:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    /* --------------- /bonus --------------- */
+
+    /* --------------- review --------------- */
+    .review__frame{
+        margin-bottom: 16px;
+        padding-top: 20px;
+    }
+    .review__frame .btn_yellow{
+        width: 148px;
+        margin-top: 0;
+    }
+    /* --------------- /review --------------- */
+
 }
 
 @media (min-width: 1024px){

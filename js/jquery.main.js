@@ -7,8 +7,6 @@ $(function(){
 
     });
 
-
-
     $(window).on({
         'scroll':function(){
             if($(window).scrollTop() > $(window).height()){
@@ -36,7 +34,6 @@ $(function(){
 
         }
     });
-
 
     $.each( $('.hidden-wrap'), function () {
         new ShowText( $(this) );
@@ -80,9 +77,6 @@ var ShowText = function (obj) {
 
     _init();
 };
-
-
-
 
 var Slider = function (obj) {
 
