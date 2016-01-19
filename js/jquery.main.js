@@ -111,20 +111,9 @@ var Slider = function (obj) {
             var __swiperPromo = new Swiper(_obj, {
                 nextButton: _next,
                 prevButton: _prev,
-                slidesPerView: 4,
+                slidesPerView: 'auto',
                 spaceBetween: 0,
-                loop: true,
-                breakpoints: {
-                    767: {
-                        slidesPerView: 3
-                    },
-                    600: {
-                        slidesPerView: 2
-                    },
-                    400: {
-                        slidesPerView: 1
-                    }
-                }
+                loop: true
             });
     }
 
