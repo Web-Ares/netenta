@@ -67,6 +67,7 @@ body{
     background-position: calc(100% + 102px) 0;
     background-size: 321px 315px;
 }
+
 .site:after {
     content: '';
     display: block;
@@ -1142,7 +1143,7 @@ a.paginator__next{
     background: linear-gradient(top, rgba(101,237,195,0.5) 0%,rgba(122,211,65,0.7) 75%);
     top: -7px;
     right: -7px;
-    bottom: -2px;
+    bottom: -7px;
     left: -7px;
     border-radius: 3px;
     z-index: 2;
@@ -1183,7 +1184,7 @@ a.paginator__next{
     opacity: 0;
 }
 .preview__button:hover{
-    background-color: #eaf35e;
+    background-color:#fff;;
 }
 .preview__games-descr{
     position: absolute;
