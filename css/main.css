@@ -1117,7 +1117,10 @@ a.paginator__next{
     background: url("../img/game-bg.jpg") no-repeat top right;
     background-size: 100% auto;
     background-color: #1f1f1f;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+}
+.preview__all_games{
+    background: #1f1f1f;
 }
 .preview__games>div{
     display: none;
@@ -1205,6 +1208,18 @@ a.paginator__next{
 .preview__games-descr strong{
     text-transform: uppercase;
     display: block;
+}
+.preview__games-show{
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #7ad340;
+}
+.preview__games-show:hover{
+    color: #62ff00;
 }
 /* --------------- /preview__games --------------- */
 
@@ -2536,6 +2551,10 @@ a.game__casino:hover{
     }
     .single-game__quoter p {
         margin-left: 81px;
+    }
+    .preview__games-show {
+        text-align: right;
+        margin-right: 18px;
     }
     /* --------------- /single-game --------------- */
 
