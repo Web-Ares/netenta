@@ -1866,6 +1866,25 @@ a.game__casino:hover{
     padding: 16px 9px 0;
     background: #1f1f1f url("../img/aside-bg.png") no-repeat top left;
 }
+.review__frame input{
+    padding: 0 13px;
+    border: none;
+    background-color: #1f1f1f;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+.review__frame input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #e5e5e5;
+}
+.review__frame input:-moz-placeholder {
+    font-size: 18px;
+    color: #e5e5e5;
+}
+.review__frame input.placeholder {
+    font-size: 18px;
+    color: #e5e5e5;
+}
 .review__form{
     margin-bottom: 15px;
     padding-bottom: 21px;
@@ -1880,6 +1899,7 @@ a.game__casino:hover{
     border: 1px solid #292929;
     border-radius: 2px;
     background-color: #141414;
+    color: #e5e5e5;
 }
 .review__casino{
     display: block;
