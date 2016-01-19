@@ -1009,9 +1009,13 @@ a.btn-play{
 }
 .latest-slider .swiper-slide,
 .coutry-slider .swiper-slide{
+    width: auto;
     padding-top: 2px;
     text-align: center;
     color: #999;
+}
+.latest-slider .swiper-slide{
+    margin-left: 20px;
 }
 .latest-slider .swiper-button-prev,
 .latest-slider .swiper-button-next,
@@ -2145,8 +2149,8 @@ a.game__casino:hover{
     .btn-up {
         background: url("../img/top.png") no-repeat;
         background-size: contain;
-        width: 90px;
-        height: 155px;
+        width: 178px;
+        height: 265px;
     }
     /* --------------- btn-up --------------- */
 
