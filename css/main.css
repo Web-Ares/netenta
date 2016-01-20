@@ -238,6 +238,16 @@ body{
     margin-bottom: 12px;
     padding-bottom: 0;
 }
+
+.site__aside__popular .popular-last{
+    display: block;
+    color: #7ad340;
+    padding-top: 11px;
+    transition: color .3s ease;
+}
+.site__aside__popular .popular-last:hover{
+    color: #e5e5e5;
+}
 /* --------------- /site --------------- */
 
 /* --------------- breadcrums --------------- */
@@ -572,8 +582,8 @@ body{
     right: 27px;
     background: url("../img/top_mobile.png") no-repeat;
     background-size: contain;
-    width: 42px;
-    height: 51px;
+    width: 86px;
+    height: 103px;
     overflow: hidden;
     cursor: pointer;
     z-index: 5;
@@ -2643,6 +2653,9 @@ a.game__casino:hover{
     .new-netent__desktop{
         display: block;
     }
+    .site__aside__popular .popular-last {
+        display: none;
+    }
     .site__aside .new-netent__desktop li {
         padding-bottom: 0;
         margin-bottom: 0;
@@ -3027,6 +3040,12 @@ a.game__casino:hover{
     .site__aside__netent ul li:last-child{
         border-bottom: 1px solid #292929;
         padding-bottom: 16px;
+    }
+    .site__aside__popular .popular-last-molibe{
+        display: none;
+    }
+    .site__aside__popular .popular-last-desktop{
+        display: block;
     }
     /* --------------- /site__aside --------------- */
 
