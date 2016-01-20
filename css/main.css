@@ -2242,11 +2242,7 @@ a.game__casino:hover{
         padding: 20px 9px 0;
     }
     .game .games-tablet {
-        margin: 0;
-        float: right;
-        position: relative;
-        left: 15px;
-        top: -7px;
+        display: inline-block;
     }
     .game .games-tablet > div {
         vertical-align: middle;
@@ -3237,12 +3233,6 @@ a.game__casino:hover{
     .game .game__casino {
         font-size: 14px;
         margin-left: 47px;
-    }
-    .game .games-tablet {
-        left: 34px;
-        top: -5px;
-        float: none;
-        display: inline-block;
     }
     .games .game {
         padding-top: 21px;
