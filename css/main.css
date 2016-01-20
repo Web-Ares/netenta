@@ -599,7 +599,7 @@ a.btn-play{
     line-height: 30px;
     width: 139px;
     letter-spacing: 2px;
-    color: #fff;
+    color: #dddddd;
     border: none;
     display: inline-block;
     background: -webkit-linear-gradient(left, #61f2de 0%,#7ad341 50%);
@@ -860,6 +860,11 @@ a.btn-play{
     padding-bottom: 6px;
     border-bottom: 2px solid #292929;
 }
+.games .game:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
 .games .game:nth-child(2){
     border-top: 2px solid #292929;
 }
@@ -911,7 +916,7 @@ a.btn-play{
 }
 .game .game__bonus{
     display: inline-block;
-    color: #e6e6e6;
+    color: #dddddd;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -931,7 +936,7 @@ a.btn-play{
     right: -2px;
     padding: 6px;
     float: right;
-    color: #e6e6e6;
+    color: #dddddd;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -2210,6 +2215,12 @@ a.game__casino:hover{
     /* --------------- games --------------- */
     .games .games__head {
         display: block;
+        text-align: justify;
+    }
+    .games .games__head:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
     }
     .games {
         padding: 20px 9px 0;
@@ -2227,7 +2238,7 @@ a.game__casino:hover{
         margin-top: 0;
     }
     .games__head-casino {
-        margin-right: 20px;
+        margin-right: 17px;
     }
     .games__head-rating {
         margin-right: 6px;
@@ -2241,6 +2252,7 @@ a.game__casino:hover{
         margin-left: 52px;
         vertical-align: middle;
         width: 131px;
+        margin-right: 20px;
     }
     .game .game__casino > img {
         top: 50%;
@@ -2258,6 +2270,9 @@ a.game__casino:hover{
     .game .game__rating {
         margin-right: 28px;
         position: static;
+    }
+    .game div {
+        vertical-align: middle;
     }
     .game__rating > div {
         background: url("../img/star1.png") repeat-x top left;
@@ -2277,12 +2292,17 @@ a.game__casino:hover{
         float: none;
         display: inline-block;
         font-size: 15px;
-        margin-right: 21px;
+        margin-right: 4px;
         top: -3px;
     }
     .game .game__buttons {
         display: inline-block;
-        margin-right: 16px;
+        position: relative;
+        margin-right: 6px;
+        right: -7px;
+    }
+    .games .game {
+        text-align: justify;
     }
     a.btn-play {
         display: block;
@@ -3210,6 +3230,7 @@ a.game__casino:hover{
         display: inline-block;
     }
     .games .game {
+        text-align: left;
         padding-top: 21px;
         padding-bottom: 4px;
     }
@@ -3236,6 +3257,9 @@ a.game__casino:hover{
     }
     .games .games__head .games_head_tablet {
         left: -116px;
+    }
+    .game .game__buttons {
+        margin-right: 0;
     }
     /* --------------- /games --------------- */
 
