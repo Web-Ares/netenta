@@ -953,28 +953,13 @@ a.btn-play{
 }
 .games .games__head  div{
     display: inline-block;
-    width: 96px;
+    width: 109px;
     color: #999999;
     text-transform: uppercase;
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     vertical-align: middle;
-}
-.games .games__head .games__head-flag{
-    width: 32px;
-}
-.games .games__head .games__head-casino{
-    width: 148px;
-}
-.games .games__head .games__head-rating{
-    width: 61px;
-}
-.games .games__head .games__head-bonus{
-    width: 97px;
-}
-.games .games__head .games__head-code{
-    width: 117px;
 }
 .games .games__head .games_head_tablet{
     width: auto;
