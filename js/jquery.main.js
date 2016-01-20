@@ -35,6 +35,12 @@ $(function(){
         }
     });
 
+    $( ".popular-last" ).click(function() {
+        $( ".site__aside__popular ul li" ).removeClass( "popular-mobile");
+        $( ".popular-last").css('display', 'none');
+        return false;
+    });
+
     $.each( $('.hidden-wrap'), function () {
         new ShowText( $(this) );
     });
