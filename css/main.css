@@ -248,6 +248,17 @@ body{
 .site__aside__popular .popular-last:hover{
     color: #e5e5e5;
 }
+.site__games{
+    background-size: 100% 400px;
+    background-position: 0 0;
+}
+.site__aside__popular .popular-last:hover{
+    color: #e5e5e5;
+}
+.site__games{
+    background-size: 100% 400px;
+    background-position: 0 0;
+}
 /* --------------- /site --------------- */
 
 /* --------------- breadcrums --------------- */
@@ -1126,7 +1137,10 @@ a.paginator__next{
     background: url("../img/game-bg.jpg") no-repeat top right;
     background-size: 100% auto;
     background-color: #1f1f1f;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+}
+.preview__all_games{
+    background: #1f1f1f;
 }
 .preview__games>div{
     display: none;
@@ -1152,7 +1166,7 @@ a.paginator__next{
     background: linear-gradient(top, rgba(101,237,195,0.5) 0%,rgba(122,211,65,0.7) 75%);
     top: -7px;
     right: -7px;
-    bottom: -2px;
+    bottom: -7px;
     left: -7px;
     border-radius: 3px;
     z-index: 2;
@@ -1193,7 +1207,7 @@ a.paginator__next{
     opacity: 0;
 }
 .preview__button:hover{
-    background-color: #eaf35e;
+    background-color:#fff;;
 }
 .preview__games-descr{
     position: absolute;
@@ -1214,6 +1228,18 @@ a.paginator__next{
 .preview__games-descr strong{
     text-transform: uppercase;
     display: block;
+}
+.preview__games-show{
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #7ad340;
+}
+.preview__games-show:hover{
+    color: #62ff00;
 }
 /* --------------- /preview__games --------------- */
 
@@ -1368,11 +1394,16 @@ a.btn_latest{
     width: 100%;
     height: 40px;
     line-height: 41px;
-    background: #f0d543;
+    background: transparent;
     margin-bottom: 21px;
+    transition: background .3s ease;
+    border: 1px solid #f0d543;
+}
+a.btn_latest:hover{
+    background: #f0d543;
 }
 a.btn_latest:before {
-    background: #1f1f1f;
+    display: none;
 }
 .latest__rate{
     margin-bottom: 26px;
@@ -2103,6 +2134,10 @@ a.game__casino:hover{
     .site__aside__popular ul li {
         margin-bottom: 13px;
     }
+    .site__games{
+        background-size: 100% 500px;
+        background-position: 0 0;
+    }
     /* --------------- /site__aside --------------- */
 
     /* --------------- btn --------------- */
@@ -2545,6 +2580,10 @@ a.game__casino:hover{
     }
     .single-game__quoter p {
         margin-left: 81px;
+    }
+    .preview__games-show {
+        text-align: right;
+        margin-right: 18px;
     }
     /* --------------- /single-game --------------- */
 
@@ -3047,6 +3086,12 @@ a.game__casino:hover{
     .site__aside__popular .popular-last-desktop{
         display: block;
     }
+    .site__aside__popular .popular-last-molibe{
+        display: none;
+    }
+    .site__aside__popular .popular-last-desktop{
+        display: block;
+    }
     /* --------------- /site__aside --------------- */
 
     /* --------------- breadcrums --------------- */
@@ -3121,6 +3166,10 @@ a.game__casino:hover{
     }
     .site__footer-super, .site__footer-popular, .site__footer-menu {
         text-align: left;
+    }
+    .site__games{
+        background-size: 100% 1130px;
+        background-position: 0 0;
     }
     /* --------------- /site --------------- */
 
@@ -3346,7 +3395,7 @@ a.game__casino:hover{
     a.btn_latest {
         right: 21px;
         font-size: 15px;
-        line-height: 44px;
+        line-height: 41px;
     }
     .latest__code {
         right: 21px;

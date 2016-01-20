@@ -11,6 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,500,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
 
 </head>
 <body>
@@ -82,23 +83,84 @@
     <!-- site__content -->
     <div class="site__content">
 
-        <!-- text -->
-        <div class="text">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse quis lorem eu purus convallis interdum.
-                Fusce ac dolor faucibus, hendrerit libero in, lacinia justo.
-                Etiam mattis commodo felis eu accumsan. Nulla sodales ligula id
-                dolor finibus, nec fermentum odio ullamcorper. Pellentesque finibus
-                semper lacus eget imperdiet. Sed vel consectetur tellus.
-            </p>
-        </div>
-        <!-- /text -->
+
 
         <!-- site__content-layout -->
         <div class="site__content-layout">
 
+            <!-- breadcrums -->
+            <div class="breadcrums">
+                <a href="#">Home</a>
+                <span>Games</span>
+            </div>
+            <!-- breadcrums -->
+
             <h2 class="site__title">Video poker</h2>
+
+            <!-- coutry-slider -->
+            <div class="latest-slider">
+
+                <div class="swiper-container">
+
+                    <!-- swiper-wrapper -->
+                    <div class="swiper-wrapper">
+
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#" class="active"><span>Featured</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Slots</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Table games</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Video pokers</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Mini-games</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Lottery</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Others</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+                        <!-- /swiper-slide -->
+                        <div class="swiper-slide slide_menu">
+                            <a href="#"><span>Jackpot games</span></a>
+                        </div>
+                        <!-- /swiper-slide -->
+
+                    </div>
+                    <!-- /swiper-wrapper -->
+
+                </div>
+
+                <!-- swiper-button-prev -->
+                <div class="swiper-button-prev button_prev"></div>
+                <!-- /swiper-button-prev -->
+
+                <!-- swiper-button-next -->
+                <div class="swiper-button-next button_next"></div>
+                <!-- /swiper-button-next -->
+
+            </div>
+            <!-- /coutry-slider -->
 
             <!-- games -->
             <div class="games">
@@ -264,7 +326,7 @@
             <!-- /games -->
             <h2 class="site__title">Video poker</h2>
 
-            <div class="preview__games">
+            <div class="preview__games preview__all_games">
 
                 <div>
                     <a href="#" style="background-image: url('img/game1.png')">
@@ -338,12 +400,13 @@
                     </a>
 
                 </div>
+                <a href="#" class="preview__games-show">Show all Video Slots Games ></a>
 
             </div>
 
             <h2 class="site__title">Video poker</h2>
 
-            <div class="preview__games">
+            <div class="preview__games preview__all_games">
 
                 <div>
                     <a href="#" style="background-image: url('img/game1.png')">
@@ -417,12 +480,12 @@
                     </a>
 
                 </div>
-
+                <a href="#" class="preview__games-show">Show all Video Slots Games ></a>
             </div>
 
             <h2 class="site__title">Video poker</h2>
 
-            <div class="preview__games">
+            <div class="preview__games preview__all_games">
 
                 <div>
                     <a href="#" style="background-image: url('img/game1.png')">
@@ -496,12 +559,12 @@
                     </a>
 
                 </div>
-
+                <a href="#" class="preview__games-show">Show all Video Slots Games ></a>
             </div>
 
             <h2 class="site__title">Video poker</h2>
 
-            <div class="preview__games">
+            <div class="preview__games preview__all_games">
 
                 <div>
                     <a href="#" style="background-image: url('img/game1.png')">
@@ -575,12 +638,12 @@
                     </a>
 
                 </div>
-
+                <a href="#" class="preview__games-show">Show all Video Slots Games ></a>
             </div>
 
             <h2 class="site__title">Video poker</h2>
 
-            <div class="preview__games">
+            <div class="preview__games preview__all_games">
 
                 <div>
                     <a href="#" style="background-image: url('img/game1.png')">
@@ -654,9 +717,23 @@
                     </a>
 
                 </div>
-
+                <a href="#" class="preview__games-show">Show all Video Slots Games ></a>
             </div>
 
+            <!-- paginator -->
+            <div class="paginator">
+                <a href="#" class="paginator__prev"></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>4</span>
+                <a href="#">5</a>
+                ...
+                <a href="#">128</a>
+                <a href="#" class="paginator__next"></a>
+            </div>
+            <!-- /paginator -->
+            
         </div>
         <!-- site__content-layout -->
 
@@ -1027,6 +1104,7 @@
             <span class="site__footer-copyright">© 2015 Netenta. All rights reserved</span>
             <!-- /site__footer-copyright -->
 
+
         </div>
         <!-- /site__footer-layout -->
     </footer>
@@ -1035,6 +1113,7 @@
 </div><!-- /site -->
 
 <script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/jquery.main.js"></script>
 
 </body>
