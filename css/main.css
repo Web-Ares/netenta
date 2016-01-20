@@ -3244,6 +3244,10 @@ a.game__casino:hover{
         position: relative;
         top: -1px;
     }
+    .games .games__head {
+        display: block;
+        text-align: left;
+    }
     .games .games__head .games_head_tablet {
         left: -116px;
     }
