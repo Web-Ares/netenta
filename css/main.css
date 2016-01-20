@@ -239,6 +239,10 @@ body{
     margin-bottom: 12px;
     padding-bottom: 0;
 }
+.site__games{
+    background-size: 100% 400px;
+    background-position: 0 0;
+}
 /* --------------- /site --------------- */
 
 /* --------------- breadcrums --------------- */
@@ -2109,6 +2113,10 @@ a.game__casino:hover{
     .site__aside__popular ul li {
         margin-bottom: 13px;
     }
+    .site__games{
+        background-size: 100% 500px;
+        background-position: 0 0;
+    }
     /* --------------- /site__aside --------------- */
 
     /* --------------- btn --------------- */
@@ -3122,6 +3130,10 @@ a.game__casino:hover{
     }
     .site__footer-super, .site__footer-popular, .site__footer-menu {
         text-align: left;
+    }
+    .site__games{
+        background-size: 100% 1130px;
+        background-position: 0 0;
     }
     /* --------------- /site --------------- */
 
