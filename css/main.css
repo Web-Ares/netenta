@@ -447,6 +447,7 @@ body{
 .social{
     position: relative;
     width: 200px;
+    margin: 0 auto;
     padding-top: 6px;
     margin-bottom: 22px;
 }
