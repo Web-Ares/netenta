@@ -36,7 +36,7 @@ $(function(){
     });
 
     $( ".popular-last" ).click(function() {
-        $( ".site__aside__popular ul li" ).removeClass( "popular-mobile");
+        $( ".site__aside__popular ul li" ).css('display', 'block');
         $( ".popular-last").css('display', 'none');
         return false;
     });
