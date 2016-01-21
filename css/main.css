@@ -838,6 +838,7 @@ a.btn-play{
     border-radius: 4px;
     background-color: #292929;
     font: italic 14px 'roboto', sans-serif;
+    color: #fff;
 }
 .search__frame button{
     position: absolute;
