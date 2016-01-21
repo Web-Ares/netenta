@@ -2239,6 +2239,7 @@ a.game__casino:hover{
     .games .games__head {
         display: block;
         text-align: justify;
+        height: 24px;
     }
     .games .games__head:after{
         content: '';
@@ -2269,7 +2270,7 @@ a.game__casino:hover{
     .game .game__casino {
         display: inline-block;
         font-size: 15px;
-        margin-left: 52px;
+        margin-left: 45px;
         vertical-align: middle;
 
         margin-right: 20px;
@@ -2305,14 +2306,16 @@ a.game__casino:hover{
     .game .game__bonus {
         margin-right: 13px;
         position: relative;
-        top: -4px;
+        right: -21px;
+        top: -2px;
     }
     .game .game__code {
         float: none;
         display: inline-block;
         font-size: 15px;
         margin-right: 4px;
-        top: -3px;
+        top: 0px;
+        left: 14px;
     }
     .game .game__buttons {
         display: inline-block;
@@ -2321,7 +2324,9 @@ a.game__casino:hover{
         right: -7px;
     }
     .games .game {
+        padding-top: 9px;
         text-align: justify;
+        height: 76px;
     }
     a.btn-play {
         display: block;
@@ -3259,7 +3264,8 @@ a.game__casino:hover{
         margin-left: 47px;
     }
     .games .game {
-        padding-top: 21px;
+        text-align: left;
+        padding-top: 8px;
         padding-bottom: 4px;
     }
     .game .game__bonus {
@@ -3275,9 +3281,12 @@ a.game__casino:hover{
     }
     .game .game__bonus {
         margin-right: 17px;
+        left: 44px;
+        top: -1px;
     }
     .game .game__code {
         margin-right: 13px;
+        left: 40px;
     }
     a.btn-all {
         position: relative;
@@ -3292,6 +3301,13 @@ a.game__casino:hover{
     }
     .game .game__buttons {
         margin-right: 0;
+        left: 31px;
+        top: -2px;
+    }
+    .game .game__rating{
+        left: 16px;
+        position: relative;
+        top: 3px;
     }
     /* --------------- /games --------------- */
 
