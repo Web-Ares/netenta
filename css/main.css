@@ -259,6 +259,15 @@ body{
     background-size: 100% 400px;
     background-position: 0 0;
 }
+.site__aside__popular ul li{
+    display: none;
+}
+.site__aside__popular ul li:nth-child(n+1):nth-child(-n+10) {
+    display: block;
+}
+.site__aside__popular ul li:last-child{
+    display: block;
+}
 /* --------------- /site --------------- */
 
 /* --------------- breadcrums --------------- */
@@ -3116,6 +3125,12 @@ a.game__casino:hover{
     .site__aside__popular .popular-last-desktop{
         display: block;
     }
+    .site__aside__popular ul li{
+        display: block;
+    }
+    .site__aside__popular ul li:last-child{
+        display: none;
+    }
     /* --------------- /site__aside --------------- */
 
     /* --------------- breadcrums --------------- */
@@ -3580,4 +3595,5 @@ a.game__casino:hover{
         display: block;
     }
     /* --------------- /bonus --------------- */
+
 }
